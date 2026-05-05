@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap');
+@import "@flaticon/flaticon-uicons/css/all/all.css";
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #ededed;
+  }
+}
+
+@font-face {
+  font-family: "Melodrama";
+  src: url("/fonts/Melodrama-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Melodrama";
+  src: url("/fonts/Melodrama-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Melodrama";
+  src: url("/fonts/Melodrama-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Praise-Regular";
+  src: url("/fonts/Praise-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.praise-regular {
+  font-family: "Praise-Regular", serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive Font Sizes Base */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+.melodrama {
+  font-family: "Melodrama", serif;
+}
+
+.melodrama-light {
+  font-family: "Melodrama", serif;
+  font-weight: 300;
+}
+
+body {
+  background-color: black;
+  color: var(--foreground);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.blog-card {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(.16, 1, .3, 1);
+}
+
+.blog-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}

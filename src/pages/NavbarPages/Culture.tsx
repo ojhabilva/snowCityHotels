@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Culture() {
-    const fadeIn = {
+    const fadeIn: any = {
         hidden: { opacity: 0, y: 30 },
         show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
     };
@@ -13,25 +13,30 @@ export default function Culture() {
     return (
         <div className="bg-white text-black font-poppins">
             {/* Hero Section */}
-            <section className="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center text-center text-white">
+            <section className="relative w-full h-[60vh] md:h-[80vh] flex flex-col items-center justify-between text-center text-white py-16 md:py-24">
                 <Image
                     src={Blog2.src}
                     alt="Culture Hero"
                     fill
                     className="object-cover"
                 />
-                <div className="absolute inset-0 bg-[#486221]/40" />
-                <motion.div 
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                <div className="absolute inset-0 bg-black/30" />
+                <motion.h1 
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    className="relative z-10 px-6"
+                    className="relative z-10 text-[50px] md:text-[70px] font-semibold leading-tight font-poppins"
                 >
-                    <h1 className="text-5xl md:text-8xl font-bold mb-4">Culture</h1>
-                    <p className="text-xl md:text-3xl font-medium opacity-90">
-                        Inclusivity, Balance, and Holistic Well-being
-                    </p>
-                </motion.div>
+                    Culture
+                </motion.h1>
+                <motion.p 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 0.2 }}
+                    className="relative z-10 text-[22px] md:text-[32px] font-medium font-poppins"
+                >
+                    Inclusivity, Balance, and Holistic Well-being
+                </motion.p>
             </section>
 
             {/* Introduction Section */}
@@ -51,20 +56,20 @@ export default function Culture() {
             </section>
 
             {/* Our Belief Section */}
-            <section className="py-20 px-6 md:px-24 max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <section className="py-20 px-4 md:px-12 max-w-[1400px] mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     <motion.div 
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="relative w-full aspect-[4/3] rounded-sm overflow-hidden shadow-2xl"
+                        className="relative w-full aspect-[16/10] rounded-sm overflow-hidden"
                     >
                         <Image
                             src={InfoDesk2.src}
                             alt="Dining Table"
                             fill
-                            className="object-cover hover:scale-105 transition-transform duration-700"
+                            className="object-cover"
                         />
                     </motion.div>
                     <motion.div 
@@ -72,10 +77,10 @@ export default function Culture() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="space-y-8"
+                        className="space-y-6"
                     >
-                        <h2 className="text-4xl md:text-5xl font-bold">Our Belief</h2>
-                        <p className="text-lg md:text-xl leading-relaxed text-gray-700 text-justify">
+                        <h2 className="text-[30px] font-bold">Our Belief</h2>
+                        <p className="text-[19px] leading-relaxed text-gray-800 text-justify">
                             At Snow City Stays, we believe luxury goes beyond opulence—it is rooted in authenticity, 
                             sustainability, and meaningful connections. Through personalised service, thoughtful design, 
                             and a deep respect for the environment, we create a sanctuary that values both people and 
@@ -142,20 +147,20 @@ export default function Culture() {
             </section>
 
             {/* Our Approach Section */}
-            <section className="py-24 px-6 md:px-24 max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <section className="py-24 px-4 md:px-12 max-w-[1400px] mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     <motion.div 
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="relative w-full aspect-video rounded-sm overflow-hidden shadow-xl"
+                        className="relative w-full aspect-[16/10] rounded-sm overflow-hidden"
                     >
                         <Image
                             src={MontanaBG.src}
                             alt="Montana Blues"
                             fill
-                            className="object-cover hover:scale-105 transition-transform duration-700"
+                            className="object-cover"
                         />
                     </motion.div>
                     <motion.div 
@@ -163,10 +168,10 @@ export default function Culture() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="border-4 border-[#3b82f6] p-10 relative"
+                        className="space-y-6"
                     >
-                        <h3 className="text-3xl md:text-4xl font-bold mb-6">Our Approach</h3>
-                        <p className="text-lg md:text-xl leading-relaxed text-gray-800">
+                        <h3 className="text-[30px] font-bold">Our Approach</h3>
+                        <p className="text-[19px] leading-relaxed text-gray-800">
                             We foster an inclusive and balanced culture rooted in well-being for everyone. 
                             Our diverse team is professionally trained to deliver exceptional service standards, 
                             while staying deeply respectful of the cultural spirit of each destination.
@@ -176,23 +181,33 @@ export default function Culture() {
             </section>
 
             {/* Bottom Section - Brand Cards */}
-            <section className="py-20 px-6 md:px-24 bg-[#FFFBEB]">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            <section className="bg-[#FFFBEB] py-20">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto px-6 items-start">
                     {[
                         { title: "Sustainability", desc: "Living in harmony with nature and our community", image: Blog1.src },
                         { title: "Culture", desc: "A community of forward-thinkers and go-getters", image: Blog2.src },
                         { title: "History", desc: "A community of forward-thinkers and go-getters", image: Blog3.src },
                         { title: "Explore", desc: "A community of forward-thinkers and go-getters", image: Blog4.src },
                     ].map((item, index) => (
-                        <div key={index} className="flex flex-col bg-white shadow-sm hover:shadow-xl transition-shadow duration-500">
-                            <div className="relative h-[250px] w-full overflow-hidden">
-                                <Image src={item.image} alt={item.title} fill className="object-cover transition-transform hover:scale-105 duration-500" />
+                        <motion.div 
+                            key={index} 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.1 }}
+                            whileHover={{ y: -10 }}
+                            className="flex flex-col bg-white shadow-lg rounded-sm overflow-hidden group cursor-pointer"
+                        >
+                            <div className={`relative w-full overflow-hidden transition-all duration-500 ${
+                                index === 0 || index === 3 ? 'h-[350px] md:h-[450px]' : 'h-[250px] md:h-[280px]'
+                            }`}>
+                                <Image src={item.image} alt={item.title} fill className="object-cover transition-transform group-hover:scale-110 duration-500" />
                             </div>
-                            <div className="text-center py-8 px-4 flex flex-col items-center">
-                                <h4 className="font-bold text-2xl mb-2 uppercase tracking-wide">{item.title}</h4>
-                                <p className="text-sm text-gray-600 leading-tight">{item.desc}</p>
+                            <div className="text-center py-8 px-6 flex flex-col items-center flex-grow">
+                                <h4 className="font-bold text-2xl mb-4">{item.title}</h4>
+                                <p className="text-sm text-gray-700 leading-relaxed max-w-[200px]">{item.desc}</p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </section>

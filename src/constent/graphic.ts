@@ -65,6 +65,8 @@ import Baan2 from "../assets/Baan/f6081bc7fc7246fa4aeec0cb207a895cfd3a8dce (1).j
 import Baan3 from "../assets/Baan/7eed363d8444960bcf96a3d1365416c4f56bcd5a.png"
 import Shivalaya1 from "../assets/Shivalaya/f11e85733337c7bd82434b937148ebace87c1686.jpg"
 import NosingleUsePlastic from "../assets/NosingleUsePlastic.png"
+import ContactPageLogo from "../assets/SNOW CITY STAYS LOGOS-19 1.png"
+import EmailIcon from "../assets/email-address-svgrepo-com 1 (1).png"
 
 export {
     Property1, Property2, Property3, Property4, Property1Hover, Property2Hover, Property3Hover, Property4Hover, PropertyRoom,
@@ -87,4 +89,6 @@ export {
     Baan1, Baan2, Baan3,
     Shivalaya1,
     NosingleUsePlastic,
+    ContactPageLogo,
+    EmailIcon,
 };

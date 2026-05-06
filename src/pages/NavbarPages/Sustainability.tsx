@@ -2,7 +2,8 @@
 
 import { 
     Blog1, Blog2, Blog3, Blog4, HistorySectionbg, NavbarLogo,
-    Adv1, Adv4, PropertyRoom, Shivalaya1, InfoDesk2, NatureHouse3, MontanaBG
+    Adv1, Adv4, PropertyRoom, Shivalaya1, InfoDesk2, NatureHouse3, MontanaBG,
+    NosingleUsePlastic
 } from "@/constent/graphic";
 import Image from "next/image";
 import { 
@@ -21,7 +22,7 @@ export default function Sustainability() {
         { icon: <FaLightbulb />, label: "Energy-Efficient LED Lighting" },
         { icon: <FaTrash />, label: "On-Site Waste Segregation" },
         { icon: <FaWineBottle />, label: "Eliminating Single-Use PET Bottles" },
-        { icon: <FaBan />, label: "Free from Single-Use Plastics" },
+        { icon: <Image src={NosingleUsePlastic.src} alt="No Plastic" width={60} height={60} className="object-contain" />, label: "Free from Single-Use Plastics" },
         { icon: <FaLeaf />, label: "Back-of-House Eco Initiatives" },
         { icon: <FaStore />, label: "Locally Sourced Products" },
         { icon: <FaFileAlt />, label: "Reduced Paper Use & Recycled Materials" },
@@ -71,24 +72,24 @@ export default function Sustainability() {
     return (
         <div className="bg-white text-black font-poppins">
             {/* Hero Section */}
-            <section className="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center text-center text-white">
+            <section className="relative w-full h-[60vh] md:h-[80vh] flex items-end justify-center text-center text-white pb-16">
                 <Image
                     src={Blog1.src}
                     alt="Sustainability Hero"
                     fill
                     className="object-cover"
                 />
-                <div className="absolute inset-0 bg-black/40" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="relative z-10 px-6">
-                    <h1 className="text-4xl md:text-7xl font-bold mb-4">Sustainability</h1>
-                    <p className="text-lg md:text-2xl font-medium opacity-90">
+                    <h1 className="text-[50px] font-semibold leading-tight font-poppins mb-2">Sustainability</h1>
+                    <p className="text-[25px] font-medium opacity-100 font-poppins">
                         Our dedication to environmental responsibility
                     </p>
                 </div>
             </section>
 
             {/* Introduction Section */}
-            <section className="py-16 px-6 md:px-24 max-w-6xl mx-auto text-center">
+            <section className="pt-16 pb-0 px-6 md:px-24 max-w-6xl mx-auto text-center">
                 <p className="text-lg md:text-xl leading-relaxed text-gray-700">
                     As an integral part of the local community, Snow City Stays is dedicated to being an environmentally 
                     responsible neighbor. We actively engage in sustainability initiatives, support conservation efforts, 
@@ -96,8 +97,9 @@ export default function Sustainability() {
                     We are also committed to maintaining transparency in our environmental journey—regularly sharing 
                     our progress, achievements, and future goals with our guests and stakeholders each year.
                 </p>
-                <h2 className="text-3xl md:text-5xl font-bold mt-12 mb-8">Our Policy</h2>
             </section>
+
+            <h2 className="text-3xl md:text-5xl font-bold text-center my-8">Our Policy</h2>
 
             {/* Policy Details Section */}
             <section className="bg-[#FFFBEB] py-16 px-6 md:px-24">
@@ -190,7 +192,7 @@ export default function Sustainability() {
                                 whileHover={{ scale: 1.05, backgroundColor: "#FEF3C7" }}
                                 className="bg-[#FFFBEB] p-6 flex flex-col items-center justify-center text-center rounded-sm transition cursor-pointer hover:shadow-md h-[180px]"
                             >
-                                <div className="text-3xl text-[#486221] mb-4">
+                                <div className="text-3xl text-[#486221] mb-4 flex items-center justify-center">
                                     {item.icon}
                                 </div>
                                 <span className="text-sm font-medium text-gray-800 leading-snug">
@@ -203,11 +205,11 @@ export default function Sustainability() {
             </section>
 
             {/* Current Progress Section */}
-            <section className="bg-[#FFFBEB] py-20 px-6">
-                <div className="max-w-7xl mx-auto">
+            <section className="bg-[#FFFBEB] pt-20">
+                <div className="max-w-7xl mx-auto px-6">
                     <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">Current Progress</h2>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-6 text-lg mb-16">
+                    <div className="flex flex-col gap-y-4 text-[22px] font-normal text-black mb-16">
                         {[
                             { name: "1. Rainwater Harvesting", status: "nearing completion (70%)" },
                             { name: "2. Water-Saving Fixtures", status: "implementation in progress (70%)" },
@@ -216,45 +218,50 @@ export default function Sustainability() {
                             { name: "5. Energy-Efficient Lighting", status: "adoption increasing across spaces" },
                             { name: "6. Climate & Irrigation Systems", status: "enhancing overall efficiency" },
                         ].map((item, index) => (
-                            <div key={index} className="flex justify-between border-b border-gray-200 pb-2">
-                                <span className="font-medium">{item.name}</span>
-                                <span className="text-gray-600 italic">{item.status}</span>
+                            <div key={index} className="flex justify-between items-center py-1">
+                                <span>{item.name}</span>
+                                <span>{item.status}</span>
                             </div>
                         ))}
                     </div>
-                    
-                    <div className="relative w-full h-[400px] md:h-[600px] rounded-sm overflow-hidden">
-                        <Image
-                            src={HistorySectionbg.src}
-                            alt="Resort Progress"
-                            fill
-                            className="object-cover"
-                        />
-                    </div>
+                </div>
+                
+                <div className="relative w-full h-[400px] md:h-[600px] overflow-hidden">
+                    <Image
+                        src={HistorySectionbg.src}
+                        alt="Resort Progress"
+                        fill
+                        className="object-cover"
+                    />
                 </div>
             </section>
 
             {/* Focus Areas Section */}
-            <section className="py-24 px-6 md:px-24 bg-white">
-                <div className="max-w-7xl mx-auto text-center mb-16">
+            <section className="py-24 bg-white">
+                <div className="max-w-7xl mx-auto text-center mb-16 px-6">
                     <h2 className="text-3xl md:text-5xl font-bold mb-6">Focus Areas</h2>
                     <p className="text-lg text-gray-600 mb-8">We prioritise the following key areas across our value chain:</p>
-                    <div className="flex flex-wrap justify-center gap-4 text-sm font-medium text-gray-500 uppercase tracking-widest bg-[#FFFBEB] py-3 px-6 rounded-full inline-block mx-auto">
-                        <span>Energy Efficiency</span>
-                        <span className="hidden md:inline">•</span>
-                        <span>Carbon Footprint</span>
-                        <span className="hidden md:inline">•</span>
-                        <span>Water Conservation</span>
-                        <span className="hidden md:inline">•</span>
-                        <span>Waste Management</span>
-                        <span className="hidden md:inline">•</span>
-                        <span>Biodiversity</span>
-                        <span className="hidden md:inline">•</span>
-                        <span>Cleaning Drives</span>
+                </div>
+                
+                <div className="sticky top-0 z-40 py-4 bg-white/90 backdrop-blur-md border-y border-gray-100 mb-16">
+                    <div className="max-w-7xl mx-auto px-6 text-center">
+                        <div className="flex flex-wrap justify-center gap-8 text-sm font-bold text-gray-800 uppercase tracking-widest bg-[#FFFBEB] py-3 px-8 rounded-full inline-block">
+                            <span>Energy Efficiency</span>
+                            <span className="hidden md:inline text-gray-400">•</span>
+                            <span>Carbon Footprint</span>
+                            <span className="hidden md:inline text-gray-400">•</span>
+                            <span>Water Conservation</span>
+                            <span className="hidden md:inline text-gray-400">•</span>
+                            <span>Waste Management</span>
+                            <span className="hidden md:inline text-gray-400">•</span>
+                            <span>Biodiversity</span>
+                            <span className="hidden md:inline text-gray-400">•</span>
+                            <span>Cleaning Drives</span>
+                        </div>
                     </div>
                 </div>
 
-                <div className="max-w-7xl mx-auto space-y-24">
+                <div className="max-w-7xl mx-auto space-y-24 px-6">
                     {focusAreas.map((area, index) => (
                         <motion.div 
                             key={index} 
@@ -277,7 +284,7 @@ export default function Sustainability() {
                                 <motion.div 
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.4 }}
-                                    className="relative w-full max-w-[500px] aspect-[4/3] rounded-full overflow-hidden border-8 border-[#FFFBEB] shadow-lg cursor-pointer"
+                                    className="relative w-full max-w-[500px] aspect-[4/3] rounded-[100px] overflow-hidden shadow-lg cursor-pointer"
                                 >
                                     <Image
                                         src={area.image}
@@ -315,31 +322,35 @@ export default function Sustainability() {
                 </div>
 
                 {/* Bottom Brand Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mx-auto">
-                    {[
-                        { title: "Sustainability", desc: "Living in harmony with nature and our community", image: Blog1.src },
-                        { title: "Culture", desc: "A community of forward-thinkers and go-getters", image: Blog2.src },
-                        { title: "History", desc: "A community of forward-thinkers and go-getters", image: Blog3.src },
-                        { title: "Explore", desc: "A community of forward-thinkers and go-getters", image: Blog4.src },
-                    ].map((item, index) => (
-                        <motion.div 
-                            key={index} 
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            whileHover={{ y: -10 }}
-                            className="flex flex-col group cursor-pointer"
-                        >
-                            <div className="relative h-[250px] w-full overflow-hidden mb-4 shadow-md group-hover:shadow-xl transition-shadow duration-300">
-                                <Image src={item.image} alt={item.title} fill className="object-cover transition-transform group-hover:scale-110 duration-500" />
-                            </div>
-                            <div className="text-center bg-[#FFFBEB] py-6 px-4 flex flex-col items-center shadow-sm group-hover:bg-[#FEF3C7] transition-colors duration-300">
-                                <h4 className="font-bold text-xl mb-2">{item.title}</h4>
-                                <p className="text-sm text-gray-600 leading-tight">{item.desc}</p>
-                            </div>
-                        </motion.div>
-                    ))}
+                <div className="bg-[#FFFBEB] py-16 -mx-6 md:-mx-24 px-6 md:px-24">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto items-start">
+                        {[
+                            { title: "Sustainability", desc: "Living in harmony with nature and our community", image: Blog1.src },
+                            { title: "Culture", desc: "A community of forward-thinkers and go-getters", image: Blog2.src },
+                            { title: "History", desc: "A community of forward-thinkers and go-getters", image: Blog3.src },
+                            { title: "Explore", desc: "A community of forward-thinkers and go-getters", image: Blog4.src },
+                        ].map((item, index) => (
+                            <motion.div 
+                                key={index} 
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                whileHover={{ y: -10 }}
+                                className="flex flex-col bg-white shadow-lg rounded-sm overflow-hidden group cursor-pointer"
+                            >
+                                <div className={`relative w-full overflow-hidden transition-all duration-500 ${
+                                    index === 0 || index === 3 ? 'h-[350px] md:h-[450px]' : 'h-[250px] md:h-[280px]'
+                                }`}>
+                                    <Image src={item.image} alt={item.title} fill className="object-cover transition-transform group-hover:scale-110 duration-500" />
+                                </div>
+                                <div className="text-center py-8 px-6 flex flex-col items-center flex-grow">
+                                    <h4 className="font-bold text-2xl mb-4">{item.title}</h4>
+                                    <p className="text-sm text-gray-700 leading-relaxed max-w-[200px]">{item.desc}</p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </section>
         </div>

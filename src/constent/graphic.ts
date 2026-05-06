@@ -64,6 +64,7 @@ import Baan1 from "../assets/Baan/760de1165e683737be0c948fba84da4f6219d311.png"
 import Baan2 from "../assets/Baan/f6081bc7fc7246fa4aeec0cb207a895cfd3a8dce (1).jpg"
 import Baan3 from "../assets/Baan/7eed363d8444960bcf96a3d1365416c4f56bcd5a.png"
 import Shivalaya1 from "../assets/Shivalaya/f11e85733337c7bd82434b937148ebace87c1686.jpg"
+import NosingleUsePlastic from "../assets/NosingleUsePlastic.png"
 
 export {
     Property1, Property2, Property3, Property4, Property1Hover, Property2Hover, Property3Hover, Property4Hover, PropertyRoom,
@@ -85,4 +86,5 @@ export {
     MontanaBG, MontanaOffer,
     Baan1, Baan2, Baan3,
     Shivalaya1,
+    NosingleUsePlastic,
 };

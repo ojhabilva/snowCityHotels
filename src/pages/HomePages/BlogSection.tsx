@@ -68,20 +68,19 @@ const slideRight: Variants = {
 
 export default function BlogSection() {
   return (
-    <section id="blogs" className="w-full bg-[#e6dccd] text-black py-12 px-6 md:px-12 overflow-hidden">
-
+    <section id="blogs" className="w-full bg-[#FFFADD] text-black py-12 px-6 md:px-16 overflow-hidden">
       {/* Heading */}
       <motion.h2
         variants={fadeUp}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.2 }}
-        className="text-2xl md:text-3xl font-semibold mb-8"
+        className="text-2xl md:text-3xl font-semibold text-[#486221] text-center mb-8"
       >
         Blog
       </motion.h2>
 
-      <div className="grid md:grid-cols-[1.4fr_1fr] gap-8">
+      <div className="grid md:grid-cols-[1.6fr_1fr] gap-12">
 
         {/* LEFT BIG CARD */}
         <motion.div
@@ -92,7 +91,7 @@ export default function BlogSection() {
           className="flex flex-col"
         >
           <Link href="/Sustainability">
-            <div className="relative w-full h-[420px] md:h-[780px] overflow-hidden cursor-pointer group">
+            <div className="relative w-full h-[420px] md:h-[600px] overflow-hidden cursor-pointer group">
               <Image
                 src={Blog1.src}
                 alt="Sustainability"
@@ -121,10 +120,10 @@ export default function BlogSection() {
               whileInView="show"
               viewport={{ once: false, amount: 0.2 }}
               transition={{ delay: i * 0.15 }}
-              className="flex flex-col"
+              className="flex flex-col justify-center items-center"
             >
               <Link href={item.title === "Culture" ? "/Culture" : "#"}>
-                <div className="relative w-full h-[150px] md:h-[180px] overflow-hidden cursor-pointer group">
+                <div className="relative w-[400px] h-[150px] md:h-[180px] overflow-hidden cursor-pointer group">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -135,8 +134,8 @@ export default function BlogSection() {
               </Link>
 
               <div className="flex flex-col items-center text-center mt-3">
-                <h3 className="font-semibold text-lg">{item.title}</h3>
-                <p className="max-w-xs text-lg text-gray-700">{item.desc}</p>
+                <h3 className="font-semibold text-md">{item.title}</h3>
+                <p className="max-w-xs text-sm text-gray-700">{item.desc}</p>
               </div>
             </motion.div>
           ))}

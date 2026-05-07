@@ -19,7 +19,7 @@ export default function BlogCard({ post }: any) {
 
             <p className="text-sm">{post.description}</p>
 
-            <button className="text-sm italic hover:underline">
+            <button className="text-sm italic font-medium hover:underline">
                 Read Article
             </button>
         </div>

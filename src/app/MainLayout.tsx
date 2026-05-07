@@ -21,14 +21,24 @@ const playfair = Playfair_Display({
     variable: "--font-playfair",
 });
 
+import { MenuProvider } from "@/context/MenuContext";
+import SideMenu from "@/components/layout/SideMenu";
+import ContactMenu from "@/components/layout/ContactMenu";
+
 export default function MainLayout({ children }) {
     return (
         <html lang="en">
             <body>
-                <Navbar />
-                {children}
-                <Footer />
+                <MenuProvider>
+                    <Navbar />
+                    <SideMenu />
+                    <ContactMenu />
+                    {children}
+                    <Footer />
+                </MenuProvider>
             </body>
         </html>
     );
 }
+
+

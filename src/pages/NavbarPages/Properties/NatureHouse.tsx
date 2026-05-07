@@ -56,7 +56,7 @@ export default function NatureHouse() {
 
     return (
         <>
-            <section className="w-full bg-[#f5f5f5]">
+            <section className="w-full bg-white">
 
                 {/* HERO IMAGE */}
                 <HeroSection image="/heroSection/Welcome to1.mp4" />
@@ -73,11 +73,11 @@ export default function NatureHouse() {
 
             </section>
 
-            <section className="w-full bg-[#f5f5f5] px-6 md:px-16 py-10">
+            <section className="w-full bg-white px-6 md:px-16 py-10">
 
                 {/* ===== TOP BANNER ===== */}
                 <SectionHeader dir="justify-start" title="Snow City Stays" />
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-3 gap-14">
                     {stays.map((item) => (
                         <StayCard key={item.title} item={item} />
                     ))}
@@ -85,17 +85,17 @@ export default function NatureHouse() {
 
             </section>
 
-            <section className="w-full bg-[#f5f5f5] px-6 md:px-16 py-10">
+            <section className="w-full bg-white px-6 md:px-16 py-10">
                 <OffersBanner image={NatureHouse1.src} />
             </section>
 
-            <section className="w-full bg-[#f5f5f5] py-16 px-6 md:px-16">
+            <section className="w-full bg-white py-16 px-6 md:px-16">
 
                 {/* Header */}
                 <SectionHeader title="Latest Post" />
 
                 {/* Cards */}
-                <div className="grid text-black md:grid-cols-3 gap-10 mb-3">
+                <div className="grid text-black md:grid-cols-3 gap-14 mb-3">
                     {posts.map((post) => (
                         <BlogCard key={post.id} post={post} />
                     ))}

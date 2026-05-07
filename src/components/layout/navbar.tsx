@@ -25,7 +25,7 @@ export default function Navbar() {
 
                 {/* LEFT - LOGO */}
                 <Link href="/" className="cursor-pointer">
-                    <motion.div 
+                    <motion.div
                         whileHover={{ scale: 1.05 }}
                         className="flex items-center"
                     >
@@ -38,7 +38,7 @@ export default function Navbar() {
                 </Link>
 
                 {/* CENTER - MENU (DESKTOP) */}
-                <ul className="hidden md:flex gap-6 lg:gap-10 text-base lg:text-lg font-medium">
+                <ul className="hidden ml-20 lg:flex gap-6 lg:gap-10 text-base lg:text-lg font-medium">
                     <li>
                         <motion.button
                             whileHover="hover"
@@ -77,9 +77,9 @@ export default function Navbar() {
                 </ul>
 
                 {/* RIGHT - ACTIONS */}
-                <div className="hidden md:flex items-center gap-4">
+                <div className="hidden lg:flex items-center gap-4">
                     <Link href="/DirectReservation">
-                        <motion.button 
+                        <motion.button
                             whileHover={{ scale: 1.05 }}
                             className="text-sm md:text-lg font-semibold hover:text-[#b5a2a2] transition uppercase"
                         >
@@ -95,25 +95,23 @@ export default function Navbar() {
                 </div>
 
                 {/* MOBILE MENU BUTTON */}
-                <div className="md:hidden">
+                <div className="lg:hidden">
                     <button onClick={() => setOpen(true)} className="p-2">
                         <FaBars size={24} />
                     </button>
                 </div>
 
                 {/* MOBILE MENU OVERLAY */}
-                <div 
-                    className={`fixed inset-0 bg-black/60 z-[60] md:hidden transition-opacity duration-300 ${
-                        open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-                    }`}
+                <div
+                    className={`fixed inset-0 bg-black/60 z-[60] md:hidden transition-opacity duration-300 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                        }`}
                     onClick={() => setOpen(false)}
                 />
 
                 {/* MOBILE MENU PANEL */}
-                <div 
-                    className={`fixed top-0 right-0 h-full w-[80%] sm:w-[300px] bg-[#486221] z-[70] md:hidden transform transition-transform duration-300 ease-in-out ${
-                        open ? "translate-x-0" : "translate-x-full"
-                    } shadow-2xl p-6 flex flex-col`}
+                <div
+                    className={`fixed top-0 right-0 h-full w-[80%] sm:w-[300px] bg-[#486221] z-[70] lg:hidden transform transition-transform duration-300 ease-in-out ${open ? "translate-x-0" : "translate-x-full"
+                        } shadow-2xl p-6 flex flex-col`}
                 >
                     <div className="flex justify-end mb-8">
                         <button onClick={() => setOpen(false)} className="p-2">
@@ -122,7 +120,7 @@ export default function Navbar() {
                     </div>
 
                     <div className="flex flex-col gap-6 text-xl font-medium">
-                        <button 
+                        <button
                             onClick={() => { setShowPopup(true); setOpen(false); }}
                             className="text-left hover:translate-x-2 transition-transform"
                         >

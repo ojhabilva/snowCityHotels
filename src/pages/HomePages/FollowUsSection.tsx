@@ -39,7 +39,7 @@ const item: Variants = {
 
 export default function FollowUsSection() {
     return (
-        <section id="follow" className="w-full bg-[#e6e6e6] py-10 overflow-hidden">
+        <section id="follow" className="w-full bg-white py-10 px-6 overflow-hidden">
 
             {/* Heading */}
             <motion.h2
@@ -47,7 +47,7 @@ export default function FollowUsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: false, amount: 0.2 }}
-                className="text-center text-2xl text-black md:text-4xl font-semibold mb-8"
+                className="text-center text-2xl text-[#486221] md:text-4xl font-semibold mb-8"
             >
                 Follow Us
             </motion.h2>
@@ -58,7 +58,7 @@ export default function FollowUsSection() {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.2 }}
-                className="grid grid-cols-2 md:grid-cols-4"
+                className="grid grid-cols-2 md:grid-cols-4 gap-6"
             >
                 {places.map((itemData, i) => (
                     <motion.div

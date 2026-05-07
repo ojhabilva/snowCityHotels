@@ -83,7 +83,7 @@ export default function Hero() {
     ];
 
     return (
-        <div id="home" className="relative w-full min-h-[90vh] md:min-h-[100vh] lg:h-[110vh] overflow-hidden">
+        <div id="home" className="relative w-full min-h-[90vh] md:min-h-[100vh] overflow-hidden">
 
             {/* Background — wrapped to contain scale without clipping the layout */}
             <div className="absolute inset-0 overflow-hidden">
@@ -116,7 +116,7 @@ export default function Hero() {
                 </h1>
 
                 {/* Search */}
-                <div className="animate-text flex border-2 border-amber-50 items-center rounded-xl md:rounded-2xl px-3 md:px-5 py-2 shadow-lg w-[80%] sm:w-[250px] md:w-[300px]">
+                <div className="animate-text flex border-2 border-amber-50 items-center rounded-xl md:rounded-2xl px-3 md:px-5 py-2 shadow-lg w-[80%] sm:w-[250px] md:w-[150px]">
                     <FaSearch className="text-white mr-2" />
                     <input
                         type="text"
@@ -129,7 +129,7 @@ export default function Hero() {
             {/* Stats */}
             <div
                 ref={statsRef}
-                className="absolute bottom-0 w-full bg-[#3f6f3a] text-white py-3 md:py-4"
+                className="absolute bottom-0 w-full bg-[#486221] text-white py-3 md:py-4"
             >
                 <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 text-center px-2 md:px-0">
                     {statsData.map((item, i) => (

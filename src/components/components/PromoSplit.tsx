@@ -1,6 +1,6 @@
 export default function PromoSplit({ image }: { image: string }) {
     return (
-        <div className="grid md:grid-cols-2 gap-2 py-10 px-10">
+        <div className="grid md:grid-cols-2 gap-2 py-10 px-6 md:px-16">
 
             {/* LEFT - BLUR PROMO */}
             <div className="relative h-[250px] md:h-[400px] overflow-hidden">

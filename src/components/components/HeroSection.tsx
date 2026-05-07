@@ -1,6 +1,10 @@
 "use client";
 
+import { useMenu } from "@/context/MenuContext";
+
+
 export default function HeroSection({ image }: { image: string }) {
+    const { openMenu, openContact } = useMenu();
 
     const isVideo = image.endsWith(".mp4") || image.endsWith(".webm") || image.endsWith(".ogg");
 
@@ -14,7 +18,7 @@ export default function HeroSection({ image }: { image: string }) {
                     loop
                     muted
                     playsInline
-                    className="w-[90%] h-full object-cover"
+                    className="w-full h-full object-cover"
                 >
                     <source src={image} type="video/mp4" />
                 </video>
@@ -22,19 +26,24 @@ export default function HeroSection({ image }: { image: string }) {
                 <img
                     src={image}
                     alt="Hero"
-                    className="w-[90%] h-full object-cover"
+                    className="w-full h-full object-cover"
                 />
             )}
 
-            {/* LEFT SIDE TEXT */}
-            <div className="absolute left-2 top-1/2 -translate-y-1/2 rotate-[-90deg] text-sm tracking-widest text-gray-700">
+            {/* <button
+                onClick={openMenu}
+                className="absolute left-2 top-1/2 -translate-y-1/2 rotate-[-90deg] text-md tracking-widest text-gray-700 hover:text-black transition-colors"
+            >
                 Menu
-            </div>
+            </button>
 
-            {/* RIGHT SIDE TEXT */}
-            <div className="absolute right-2 top-1/2 -translate-y-1/2 rotate-90 text-sm tracking-widest text-gray-700">
+            <button
+                onClick={openContact}
+                className="absolute right-2 top-1/2 -translate-y-1/2 rotate-90 text-md tracking-widest text-gray-700 hover:text-black transition-colors"
+            >
                 Contact
-            </div>
+            </button> */}
+
 
         </div>
     );

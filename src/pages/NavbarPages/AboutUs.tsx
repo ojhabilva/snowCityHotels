@@ -1,14 +1,14 @@
 "use client";
 
 import { AboutUs1, AboutUs2, AboutUs3, AboutUsBG, Blog1, Blog2, Blog3, Blog4, NavbarLogo } from "@/constent/graphic";
-import { motion, Variants } from "framer-motion";
-import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function AboutUs() {
     const fadeIn: Variants = {
         hidden: { opacity: 0, y: 30 },
         show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
     };
+
 
     const data = [
         {
@@ -47,30 +47,22 @@ export default function AboutUs() {
                 />
 
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#486221]/100 via-[#486221]/30 to-black/20" />
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-[#486221]/100 via-[#486221]/30 to-black/20" /> */}
 
+                <p className="absolute top-30 left-1/2 -translate-x-1/2 -translate-y-1/2 text-sm md:text-5xl mb-2 opacity-90">
+                    About us
+                </p>
                 {/* Content */}
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    className="relative z-10 max-w-[1400px] px-6"
+                    className="relative h-full flex justify-center items-center max-w-[1400px] px-6"
                 >
 
-                    <p className="text-sm md:text-2xl mb-2 opacity-90">
-                        About us
-                    </p>
-
-                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
-                        Snow City Stays
-                    </h1>
-
-                    <p className="text-sm md:text-base lg:text-xl leading-relaxed text-center opacity-90">
-                        At Snow City Stays, we bring a fresh perspective to hospitality by combining
-                        attentive service with responsible, sustainable practices. Inspired by the
-                        scenic charm of Manali and the lifestyle of the Himalayas, we merge natural
-                        beauty with contemporary comfort—creating spaces where every stay becomes a
-                        memorable experience.
+                    <p className="max-w-5xl text-sm md:text-base font-bold text-shadow-lg lg:text-4xl leading-relaxed text-center opacity-90">
+                        The essence of our brand is rooted in bringing different
+                        elements together in perfect balance.
                     </p>
 
                 </motion.div>
@@ -78,31 +70,17 @@ export default function AboutUs() {
             <section className="w-full bg-[#f5f5f5]">
 
                 {/* TOP TEXT */}
-                <div className="max-w-5xl mx-auto text-center px-6 py-16">
+                <div className="max-w-[1450px] mx-auto text-center px-6 pt-4">
 
-                    <motion.p 
+                    <motion.p
                         initial="hidden"
                         whileInView="show"
                         viewport={{ once: true }}
                         variants={fadeIn}
-                        className="max-w-2xl mx-auto text-gray-600 text-sm md:text-lg leading-relaxed mb-16"
+                        className="max-w-2xl mx-auto text-gray-600 text-sm md:text-lg leading-relaxed mb-18"
                     >
-                        Snow City Stays has evolved from a simple vision into a growing hospitality
-                        brand. Built on the passion and dedication behind the idea, it reflects a
-                        commitment to offering accessible luxury while maintaining high standards of
-                        quality and comfort.
+                        At Snow City Stays, we bring a fresh perspective to hospitality by combining attentive service with responsible, sustainable practices. Inspired by the scenic charm of Manali and the lifestyle of the Himalayas, we merge natural beauty with contemporary comfort—creating spaces where every stay becomes a memorable experience.
                     </motion.p>
-
-                    <motion.h2 
-                        initial="hidden"
-                        whileInView="show"
-                        viewport={{ once: true }}
-                        variants={fadeIn}
-                        className="text-2xl md:text-4xl font-semibold text-gray-800 leading-snug"
-                    >
-                        The essence of our brand is rooted in bringing different
-                        elements together in perfect balance.
-                    </motion.h2>
 
                 </div>
 
@@ -110,7 +88,7 @@ export default function AboutUs() {
                 <div className="grid grid-cols-1 md:grid-cols-3">
 
                     {/* SKY */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
@@ -130,7 +108,7 @@ export default function AboutUs() {
                     </motion.div>
 
                     {/* MOUNTAIN */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
@@ -150,7 +128,7 @@ export default function AboutUs() {
                     </motion.div>
 
                     {/* EARTH */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
@@ -174,11 +152,11 @@ export default function AboutUs() {
             <section className="w-full bg-[#f5f5f5] text-gray-800">
 
                 {/* ===== OUR STAYS ===== */}
-                <div className="max-w-[1400px] mx-auto px-6 py-16 text-center">
+                <div className="max-w-[1400px] mx-auto py-16 text-center">
 
                     <p className="text-2xl text-gray-500 mb-2">Our Stays</p>
 
-                    <motion.h2 
+                    <motion.h2
                         initial="hidden"
                         whileInView="show"
                         viewport={{ once: true }}
@@ -189,10 +167,10 @@ export default function AboutUs() {
                         Inspired by Natural Surroundings
                     </motion.h2>
 
-                    <div className="grid md:grid-cols-[3fr_1fr] gap-10 items-center mt-10 text-left">
+                    <div className="grid md:grid-cols-[2.5fr_1fr] gap-10 items-center mt-10 text-left">
 
                         {/* LEFT TEXT */}
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -213,16 +191,16 @@ export default function AboutUs() {
                         </motion.div>
 
                         {/* RIGHT LOGO BOX */}
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                             className="flex justify-center"
                         >
-                            <div className="bg-[#4b6b2c] w-[250px] h-[200px] flex items-center justify-center shadow-lg relative">
-                                <Image
-                                    src={NavbarLogo}
+                            <div className="bg-[#4b6b2c] w-[250px] h-[200px] flex items-center justify-center shadow-lg">
+                                <img
+                                    src={NavbarLogo.src}
                                     alt="Snow City"
                                     width={120}
                                     height={120}
@@ -235,11 +213,11 @@ export default function AboutUs() {
                 </div>
 
                 {/* ===== OUR CULTURE ===== */}
-                <div className="max-w-[1400px] mx-auto px-6 py-10 text-center">
+                <div className="max-w-[1400px] mx-auto py-10 text-center">
 
                     <p className="text-2xl text-gray-500 mb-2">Our Culture</p>
 
-                    <motion.h2 
+                    <motion.h2
                         initial="hidden"
                         whileInView="show"
                         viewport={{ once: true }}
@@ -249,7 +227,7 @@ export default function AboutUs() {
                         A team driven by ideas, passion, and purpose.
                     </motion.h2>
 
-                    <div className="grid md:grid-cols-[1fr_3fr] gap-10 items-center text-left">
+                    <div className="grid md:grid-cols-[1fr_3fr] gap-14 items-center text-left">
 
                         {/* LEFT IMAGE */}
                         <motion.div
@@ -268,7 +246,7 @@ export default function AboutUs() {
                         </motion.div>
 
                         {/* RIGHT TEXT */}
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -277,12 +255,12 @@ export default function AboutUs() {
                         >
                             <p>
                                 Inspired by the cultural richness of the Himalayas, we bring together hospitality and nature
-                                to create stays that feel meaningful and memorable.<br />
+                                to create stays that feel meaningful and memorable.
                                 Our approach reflects a balance of tradition and modern living, combining local character
                                 with contemporary design to offer a unique experience.
                             </p>
 
-                            <motion.button 
+                            <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="mt-10 px-5 py-2 bg-black text-white text-lg rounded hover:bg-gray-800 transition shadow-lg"
@@ -297,7 +275,7 @@ export default function AboutUs() {
                 {/* ===== QUOTE ===== */}
                 <div className="max-w-[1400px] mx-auto py-16 text-center">
 
-                    <motion.p 
+                    <motion.p
                         initial="hidden"
                         whileInView="show"
                         viewport={{ once: true }}
@@ -308,7 +286,7 @@ export default function AboutUs() {
                         we extend to our guests, our surroundings, and one another.”
                     </motion.p>
 
-                    <motion.p 
+                    <motion.p
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
@@ -333,8 +311,7 @@ export default function AboutUs() {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.6 }}
                             whileHover={{ y: -15, scale: 1.02 }}
-                            className={`group flex flex-col cursor-pointer transition-all duration-500 ease-out 
-                                ${index % 2 !== 0 ? "md:mt-12" : ""}`}
+                            className={`group flex flex-col cursor-pointer transition-all duration-500 ease-out`}
                         >
                             {/* Image */}
                             <div className="relative w-full h-[220px] overflow-hidden shadow-md group-hover:shadow-2xl transition-all duration-500">

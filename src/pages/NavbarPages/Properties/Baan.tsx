@@ -1,4 +1,7 @@
+"use client";
+
 import BlogCard from "@/components/cards/BlogCard";
+
 import StayCard from "@/components/cards/StayCard";
 import BookingBar from "@/components/components/BookingBar";
 import HeroSection from "@/components/components/HeroSection";
@@ -8,8 +11,12 @@ import SectionHeader from "@/components/components/SectionHeader";
 import { Baan1, Baan2, Baan3, Blog1, MontanaOffer, NatureHouse1, NatureHouse2, NatureHouse3, NatureHouse4, Property1, Property2, Property2Hover, Property3 } from "@/constent/graphic";
 import FollowUsSection from "@/pages/HomePages/FollowUsSection";
 import Image from "next/image";
+import { useMenu } from "@/context/MenuContext";
+
 
 export default function Baan() {
+    const { openMenu, openContact } = useMenu();
+
     const stays = [
         {
             title: "Nature House (Rana Cottage)",
@@ -86,19 +93,25 @@ export default function Baan() {
 
     return (
         <>
-            <section className="w-full bg-[#f5f5f5]">
+            <section className="w-full bg-white">
 
                 {/* HERO IMAGE */}
-                <section className="w-full px-4 md:px-16 pb-10">
+                <section className="w-full pb-10">
 
-                    <div className="absolute left-2 top-1/2 -translate-y-1/2 rotate-[-90deg] text-sm tracking-widest text-gray-700">
+                    {/* <button
+                        onClick={openMenu}
+                        className="absolute left-2 top-1/2 -translate-y-1/2 rotate-[-90deg] text-md tracking-widest text-gray-700 hover:text-black transition-colors"
+                    >
                         Menu
-                    </div>
+                    </button>
 
-                    {/* RIGHT SIDE TEXT */}
-                    <div className="absolute right-2 top-1/2 -translate-y-1/2 rotate-90 text-sm tracking-widest text-gray-700">
+                    <button
+                        onClick={openContact}
+                        className="absolute right-2 top-1/2 -translate-y-1/2 rotate-90 text-md tracking-widest text-gray-700 hover:text-black transition-colors"
+                    >
                         Contact
-                    </div>
+                    </button> */}
+
                     <div className="relative w-full mb-10 h-[300px] md:h-[400px] overflow-hidden">
 
                         {/* Background Image */}
@@ -156,11 +169,11 @@ export default function Baan() {
 
             </section>
 
-            <section className="w-full bg-[#f5f5f5] px-6 md:px-16 py-10">
+            <section className="w-full bg-white px-6 md:px-16 py-10">
 
                 {/* ===== TOP BANNER ===== */}
                 <SectionHeader dir="justify-start" title="Snow City Stays" />
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-3 gap-14">
                     {stays.map((item) => (
                         <StayCard key={item.title} item={item} />
                     ))}
@@ -168,10 +181,10 @@ export default function Baan() {
 
             </section>
 
-            <section className="w-full bg-[#f5f5f5] px-6 md:px-16 py-10">
+            <section className="w-full bg-white px-6 md:px-16 py-10">
                 <OffersBanner image={MontanaOffer.src} />
             </section>
-            <section className="w-full bg-[#f5f5f5] px-6 md:px-16 py-12 text-gray-800">
+            <section className="w-full bg-white px-6 md:px-16 py-12 text-gray-800">
 
                 {/* ===== TITLE ===== */}
                 <div className="max-w-8xl mx-auto text-center mb-12">
@@ -194,10 +207,10 @@ export default function Baan() {
                     {values.map((item, index) => (
                         <div
                             key={index}
-                            className="bg-[#4b6527] text-white px-4 py-12 rounded-xl text-sm md:text-xl shadow-md hover:shadow-xl transition"
+                            className="bg-[#4b6527] text-white px-8 py-12 rounded-xl text-sm md:text-2xl shadow-md hover:shadow-xl transition"
                         >
                             <p className="opacity-70 text-xs mb-1">Right {index + 1} →</p>
-                            <h3 className="font-semibold">{item}</h3>
+                            <h3 className="">{item}</h3>
                         </div>
                     ))}
 
@@ -265,13 +278,13 @@ export default function Baan() {
 
             </section>
 
-            <section className="w-full bg-[#f5f5f5] py-16 px-6 md:px-16">
+            <section className="w-full bg-white py-16 px-6 md:px-16">
 
                 {/* Header */}
                 <SectionHeader title="Latest Post" />
 
                 {/* Cards */}
-                <div className="grid text-black md:grid-cols-3 gap-10 mb-3">
+                <div className="grid text-black md:grid-cols-3 gap-14 mb-3">
                     {posts.map((post) => (
                         <BlogCard key={post.id} post={post} />
                     ))}

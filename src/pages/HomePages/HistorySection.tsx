@@ -47,10 +47,10 @@ export default function HistorySection() {
                 <div
                     className="
                     w-full 
-                    max-w-sm sm:max-w-md md:max-w-lg 
-                    h-[45vh] md:h-[45vh] 
+                    max-w-xs 
+                    h-[45vh] md:h-[60vh] 
                     text-center md:text-left
-                    bg-blue-900/50 backdrop-blur-md 
+                    bg-[#1A649AB5]/50 backdrop-blur-md 
                     text-white 
                     flex flex-col items-center justify-between
                     p-10 sm:p-6 md:p-8 
@@ -61,16 +61,16 @@ export default function HistorySection() {
                         Our History
                     </h2>
 
-                    <p className="text-base lg:text-lg leading-relaxed mb-4 md:mb-6">
+                    <p className="text-base lg:text-lg text-center leading-relaxed mb-4 md:mb-6">
                         Since 2015, Snow City Stays brings together dreamers and innovators,
                         drawing inspiration from the timeless culture of the Himalayas.
                     </p>
 
                     <button
                         className="
-                        bg-black text-white 
+                        bg-[#486221] text-white 
                         px-4 md:px-5 py-2 
-                        text-sm md:text-base
+                        text-sm md:text-lg
                         rounded-md 
                         hover:bg-white hover:text-black 
                         transition duration-300

@@ -10,7 +10,7 @@ export default function Properties() {
             description: "Enjoy breathtaking views...",
         },
         {
-            title: "Montana Blue Resort",
+            title: "Montana Blues Resort",
             subtitle: "(Manali)",
             image: Property2.src,
             hoverImage: Property2Hover.src,
@@ -33,10 +33,10 @@ export default function Properties() {
     ];
 
     return (
-        <section id="properties" className="pt-6 pb-16 w-full bg-white">
+        <section id="properties" className="pt-6 pb-20 w-full bg-white">
 
             {/* Heading */}
-            <h2 className="text-center text-black text-xl sm:text-2xl md:text-4xl font-semibold mb-6 px-4">
+            <h2 className="text-center text-[#486221] text-xl sm:text-2xl md:text-4xl font-semibold mb-6 px-4">
                 Properties
             </h2>
 
@@ -93,8 +93,7 @@ export default function Properties() {
                             {/* Bottom half — text + CTA */}
                             <div
                                 className="absolute bottom-0 left-0 w-full h-1/2
-                                    bg-black text-white
-                                    flex flex-col justify-center items-center
+                                    flex flex-col justify-center items-center text-black
                                     px-4 py-4 sm:p-6
                                     translate-y-full group-hover:translate-y-0
                                     transition-transform duration-500"
@@ -106,7 +105,7 @@ export default function Properties() {
                                     {item.subtitle}
                                 </p>
                                 <button
-                                    className="bg-white text-black mt-4 sm:mt-8 md:mt-10
+                                    className="bg-black text-white mt-4 sm:mt-8 md:mt-10
                                         text-sm sm:text-base md:text-lg
                                         rounded-lg px-4 py-2 sm:px-5
                                         hover:bg-gray-100 active:scale-95

@@ -1,19 +1,34 @@
+"use client";
+
 import { Property2Hover, Property3Hover, PropertyRoom } from "@/constent/graphic";
 import Image from "next/image";
 import FollowUsSection from "../HomePages/FollowUsSection";
+import { useMenu } from "@/context/MenuContext";
+import PropertyDropdown from "@/components/components/PropertyDropdown";
+
 
 export default function DirectReservation() {
+    const { openMenu, openContact } = useMenu();
+
     return (
         <>
-            <section className="w-full bg-[#e5e5e5] text-black relative pb-10">
+            <section className="w-full bg-white text-black relative pb-10">
 
                 {/* Side Labels */}
-                <div className="hidden md:block absolute left-2 top-1/2 -translate-y-1/2 rotate-[-90deg] text-sm tracking-widest">
+                {/* <button
+                    onClick={openMenu}
+                    className="hidden md:block absolute left-2 top-1/2 -translate-y-1/2 rotate-[-90deg] text-md tracking-widest hover:text-gray-600 transition-colors"
+                >
                     Menu
-                </div>
-                <div className="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 rotate-[90deg] text-sm tracking-widest">
+                </button>
+                <button
+                    onClick={openContact}
+                    className="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 rotate-[90deg] text-md tracking-widest hover:text-gray-600 transition-colors"
+                >
                     Contact
-                </div>
+                </button> */}
+
+
 
                 {/* Header */}
                 <div className="bg-[#e8e1c8] w-full py-4 text-center mb-6">
@@ -25,25 +40,12 @@ export default function DirectReservation() {
                 {/* Select */}
                 <div className="flex flex-col items-center mb-8">
                     <label className="text-lg mb-2">Select Hotels</label>
-                    <select className="w-[500px] border border-black px-4 py-2 bg-transparent">
-                        <option>Select Hotels</option>
-                        <option>
-                            Nature House (Rana Cottage)
-                        </option>
-                        <option>
-                            Montana Blue Resort (Manali)
-                        </option>
-                        <option>
-                            Baan (Snow City Stays)
-                        </option>
-                        <option>
-                            Shivalaya (Snow City Stays)
-                        </option>
-                    </select>
+                    <PropertyDropdown className="w-full md:w-[500px]" />
                 </div>
 
+
                 {/* Cards */}
-                <div className="grid md:grid-cols-2 gap-4 px-14">
+                <div className="grid md:grid-cols-2 gap-14 px-14">
 
                     {/* Stay */}
                     <div className="relative h-[450px] overflow-hidden group">
@@ -102,9 +104,9 @@ export default function DirectReservation() {
                 </div>
 
             </section>
-            <section className="w-full px-4 md:px-16 py-10 bg-[#e5e5e5]">
+            <section className="w-full py-10 bg-white">
 
-                <div className="relative w-full h-[300px] md:h-[400px] overflow-hidden">
+                <div className="relative w-full h-[300px] md:h-[500px] overflow-hidden">
 
                     {/* Background Image */}
                     <Image

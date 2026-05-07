@@ -13,30 +13,32 @@ export default function Culture() {
     return (
         <div className="bg-white text-black font-poppins">
             {/* Hero Section */}
-            <section className="relative w-full h-[60vh] md:h-[80vh] flex flex-col items-center justify-between text-center text-white py-16 md:py-24">
+            <section className="relative w-full overflow-hidden">
                 <Image
-                    src={Blog2.src}
+                    src={Blog2}
                     alt="Culture Hero"
-                    fill
-                    className="object-cover"
+                    className="w-full h-auto"
+                    priority
                 />
                 <div className="absolute inset-0 bg-black/30" />
-                <motion.h1 
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}
-                    className="relative z-10 text-[50px] md:text-[70px] font-semibold leading-tight font-poppins"
-                >
-                    Culture
-                </motion.h1>
-                <motion.p 
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.2 }}
-                    className="relative z-10 text-[22px] md:text-[32px] font-medium font-poppins"
-                >
-                    Inclusivity, Balance, and Holistic Well-being
-                </motion.p>
+                <div className="absolute inset-0 flex flex-col items-center justify-between py-16 md:py-24 text-white">
+                    <motion.h1 
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1 }}
+                        className="relative z-10 text-[50px] md:text-[70px] font-semibold leading-tight font-poppins"
+                    >
+                        Culture
+                    </motion.h1>
+                    <motion.p 
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: 0.2 }}
+                        className="relative z-10 text-[22px] md:text-[32px] font-medium font-poppins"
+                    >
+                        Inclusivity, Balance, and Holistic Well-being
+                    </motion.p>
+                </div>
             </section>
 
             {/* Introduction Section */}

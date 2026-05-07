@@ -31,8 +31,8 @@ export default function ContactUs() {
             </section>
 
             {/* Main Content Section */}
-            <section className="w-full py-12 px-4 md:px-10 lg:px-20 max-w-[1300px] mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-8 md:gap-10 items-stretch">
+            <section className="w-full py-12 px-4 md:px-6 lg:px-8 max-w-[1650px] mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_2fr] gap-8 md:gap-12 items-stretch">
                     
                     {/* LEFT COLUMN */}
                     <div className="flex flex-col space-y-6 h-full">

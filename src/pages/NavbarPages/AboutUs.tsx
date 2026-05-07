@@ -1,10 +1,11 @@
 "use client";
 
 import { AboutUs1, AboutUs2, AboutUs3, AboutUsBG, Blog1, Blog2, Blog3, Blog4, NavbarLogo } from "@/constent/graphic";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
+import Image from "next/image";
 
 export default function AboutUs() {
-    const fadeIn = {
+    const fadeIn: Variants = {
         hidden: { opacity: 0, y: 30 },
         show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
     };
@@ -13,22 +14,22 @@ export default function AboutUs() {
         {
             title: "Sustainability",
             desc: "Living in harmony with nature and our community",
-            image: Blog1.src
+            image: Blog1
         },
         {
             title: "Culture",
             desc: "A community of forward-thinkers and go-getters",
-            image: Blog2.src
+            image: Blog2
         },
         {
             title: "History",
             desc: "A community of forward-thinkers and go-getters",
-            image: Blog3.src,
+            image: Blog3,
         },
         {
             title: "Explore",
             desc: "A community of forward-thinkers and go-getters",
-            image: Blog4.src
+            image: Blog4
         },
     ];
 
@@ -37,10 +38,12 @@ export default function AboutUs() {
             <section className="relative font-poppins w-full h-[80vh] md:h-[90vh] flex items-end pb-5 justify-center text-center text-white">
 
                 {/* Background Image */}
-                <img
-                    src={AboutUsBG.src}
+                <Image
+                    src={AboutUsBG}
                     alt="Snow City"
-                    className="absolute inset-0 w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    priority
                 />
 
                 {/* Gradient Overlay */}
@@ -82,7 +85,7 @@ export default function AboutUs() {
                         whileInView="show"
                         viewport={{ once: true }}
                         variants={fadeIn}
-                        className="max-w-2xl mx-auto text-gray-600 text-sm md:text-lg leading-relaxed mb-18"
+                        className="max-w-2xl mx-auto text-gray-600 text-sm md:text-lg leading-relaxed mb-16"
                     >
                         Snow City Stays has evolved from a simple vision into a growing hospitality
                         brand. Built on the passion and dedication behind the idea, it reflects a
@@ -114,10 +117,11 @@ export default function AboutUs() {
                         transition={{ duration: 0.8 }}
                         className="relative h-[300px] md:h-[400px] group overflow-hidden cursor-pointer"
                     >
-                        <img
-                            src={AboutUs1.src}
+                        <Image
+                            src={AboutUs1}
                             alt="Sky"
-                            className="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                            fill
+                            className="object-cover transition duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition" />
                         <h3 className="absolute inset-0 flex items-center justify-center text-white text-xl md:text-4xl font-semibold">
@@ -133,10 +137,11 @@ export default function AboutUs() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="relative h-[300px] md:h-[400px] group overflow-hidden cursor-pointer"
                     >
-                        <img
-                            src={AboutUs2.src}
+                        <Image
+                            src={AboutUs2}
                             alt="Mountain"
-                            className="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                            fill
+                            className="object-cover transition duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition" />
                         <h3 className="absolute inset-0 flex items-center justify-center text-white text-xl md:text-4xl font-semibold">
@@ -152,10 +157,11 @@ export default function AboutUs() {
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="relative h-[300px] md:h-[400px] group overflow-hidden cursor-pointer"
                     >
-                        <img
-                            src={AboutUs3.src}
+                        <Image
+                            src={AboutUs3}
                             alt="Earth"
-                            className="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                            fill
+                            className="object-cover transition duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition" />
                         <h3 className="absolute inset-0 flex items-center justify-center text-white text-xl md:text-4xl font-semibold">
@@ -214,11 +220,13 @@ export default function AboutUs() {
                             transition={{ duration: 0.8 }}
                             className="flex justify-center"
                         >
-                            <div className="bg-[#4b6b2c] w-[250px] h-[200px] flex items-center justify-center shadow-lg">
-                                <img
-                                    src={NavbarLogo.src}
+                            <div className="bg-[#4b6b2c] w-[250px] h-[200px] flex items-center justify-center shadow-lg relative">
+                                <Image
+                                    src={NavbarLogo}
                                     alt="Snow City"
-                                    className="w-[120px] hover:scale-110 transition-transform duration-500"
+                                    width={120}
+                                    height={120}
+                                    className="hover:scale-110 transition-transform duration-500 object-contain"
                                 />
                             </div>
                         </motion.div>
@@ -249,11 +257,13 @@ export default function AboutUs() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
+                            className="relative w-full h-[250px] overflow-hidden"
                         >
-                            <img
-                                src={Blog2.src}
+                            <Image
+                                src={Blog2}
                                 alt="Culture"
-                                className="w-full h-[250px] object-cover shadow-xl hover:scale-105 transition-transform duration-700"
+                                fill
+                                className="object-cover shadow-xl hover:scale-105 transition-transform duration-700"
                             />
                         </motion.div>
 
@@ -313,7 +323,7 @@ export default function AboutUs() {
             </section>
             <section className="w-full bg-[#ded6b8] py-16">
 
-                <div className="max-w-8xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
 
                     {data.map((item, index) => (
                         <motion.div
@@ -327,11 +337,12 @@ export default function AboutUs() {
                                 ${index % 2 !== 0 ? "md:mt-12" : ""}`}
                         >
                             {/* Image */}
-                            <div className="overflow-hidden shadow-md group-hover:shadow-2xl transition-all duration-500">
-                                <img
+                            <div className="relative w-full h-[220px] overflow-hidden shadow-md group-hover:shadow-2xl transition-all duration-500">
+                                <Image
                                     src={item.image}
                                     alt={item.title}
-                                    className="w-full h-[220px] object-cover transition duration-700 group-hover:scale-110"
+                                    fill
+                                    className="object-cover transition duration-700 group-hover:scale-110"
                                 />
                             </div>
 

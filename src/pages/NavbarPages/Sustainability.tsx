@@ -80,7 +80,7 @@ export default function Sustainability() {
                     className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <div className="relative z-10 px-6">
+                <div className="relative z-10 px-6 md:px-[55px]">
                     <h1 className="text-[50px] font-semibold leading-tight font-poppins mb-2">Sustainability</h1>
                     <p className="text-[25px] font-medium opacity-100 font-poppins">
                         Our dedication to environmental responsibility
@@ -89,7 +89,7 @@ export default function Sustainability() {
             </section>
 
             {/* Introduction Section */}
-            <section className="pt-16 pb-0 px-6 md:px-24 max-w-6xl mx-auto text-center">
+            <section className="pt-16 pb-0 px-6 md:px-[131px] text-center">
                 <p className="text-lg md:text-xl leading-relaxed text-gray-700">
                     As an integral part of the local community, Snow City Stays is dedicated to being an environmentally 
                     responsible neighbor. We actively engage in sustainability initiatives, support conservation efforts, 
@@ -99,11 +99,11 @@ export default function Sustainability() {
                 </p>
             </section>
 
-            <h2 className="text-3xl md:text-5xl font-bold text-center my-8">Our Policy</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-center px-6 md:px-[55px] my-8">Our Policy</h2>
 
             {/* Policy Details Section */}
-            <section className="bg-[#FFFBEB] py-16 px-6 md:px-24">
-                <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+            <section className="bg-[#FFFBEB] py-16 px-6 md:px-[55px]">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div className="space-y-6">
                         <div className="h-px bg-gray-300 w-full mb-6" />
                         <p className="text-lg leading-relaxed text-gray-800">
@@ -122,7 +122,7 @@ export default function Sustainability() {
                         </p>
                     </div>
                 </div>
-                <div className="max-w-6xl mx-auto mt-12 border-t border-gray-300 pt-8">
+                <div className="mt-12 border-t border-gray-300 pt-8">
                     <h3 className="text-2xl font-bold mb-4">At Snow City Stays</h3>
                     <p className="text-lg leading-relaxed text-gray-800">
                         We are committed to operating in a way that contributes to a sustainable future for our planet, while creating 
@@ -132,17 +132,17 @@ export default function Sustainability() {
             </section>
 
             {/* Reimagining Section */}
-            <section className="py-20 px-6 md:px-24 text-center">
-                <h2 className="text-3xl md:text-5xl font-bold mb-6 max-w-4xl mx-auto leading-tight">
+            <section className="py-20 text-center">
+                <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight px-6 md:px-[330px]">
                     Reimagining the harmony between Luxury and Sustainability
                 </h2>
-                <p className="text-lg text-gray-600 mb-16 max-w-4xl mx-auto">
+                <p className="text-lg text-gray-600 mb-16 px-6 md:px-[123px]">
                     From impactful initiatives like comprehensive waste management to mindful choices such as 
                     eliminating single-use plastics—every step we take is guided by our commitment to a greener future. 
                     Our guests don't just enjoy refined comfort; they become part of a journey toward a more sustainable world.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-[55px]">
                     <div className="bg-[#FFFBEB] p-10 text-left rounded-sm">
                         <span className="text-xl font-bold mb-4 block">01.</span>
                         <h4 className="text-2xl font-bold mb-6">Compliance</h4>
@@ -173,15 +173,15 @@ export default function Sustainability() {
 
             {/* Key Achievements Section */}
             <section className="py-20 bg-white">
-                <div className="max-w-7xl mx-auto px-6 text-center">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6">Key Achievements</h2>
-                    <p className="text-lg text-gray-600 mb-16 max-w-4xl mx-auto">
+                <div className="text-center">
+                    <h2 className="text-3xl md:text-5xl font-bold mb-6 px-6 md:px-[55px]">Key Achievements</h2>
+                    <p className="text-lg text-gray-600 mb-16 px-6 md:px-[123px]">
                         Sustainability lies at the heart of our operations, with full adoption across key areas creating a strong 
                         foundation for long-term impact. These milestones reflect our dedication to responsible growth and a 
                         more sustainable future.
                     </p>
 
-                    <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-4 px-6 md:px-[55px]">
                         {achievements.map((item, index) => (
                             <motion.div 
                                 key={index} 
@@ -205,8 +205,8 @@ export default function Sustainability() {
             </section>
 
             {/* Current Progress Section */}
-            <section className="bg-[#FFFBEB] pt-20">
-                <div className="max-w-7xl mx-auto px-6">
+            <section className="bg-[#FFFBEB] pt-20 px-6 md:px-[55px]">
+                <div>
                     <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">Current Progress</h2>
                     
                     <div className="flex flex-col gap-y-4 text-[22px] font-normal text-black mb-16">
@@ -226,7 +226,7 @@ export default function Sustainability() {
                     </div>
                 </div>
                 
-                <div className="relative w-full h-[400px] md:h-[600px] overflow-hidden">
+                <div className="relative w-full h-[400px] md:h-[600px] overflow-hidden -mx-6 md:-mx-[55px]">
                     <Image
                         src={HistorySectionbg.src}
                         alt="Resort Progress"
@@ -237,31 +237,26 @@ export default function Sustainability() {
             </section>
 
             {/* Focus Areas Section */}
-            <section className="py-24 bg-white">
-                <div className="max-w-7xl mx-auto text-center mb-16 px-6">
+            <section className="py-24 bg-white px-6 md:px-[55px]">
+                <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold mb-6">Focus Areas</h2>
                     <p className="text-lg text-gray-600 mb-8">We prioritise the following key areas across our value chain:</p>
                 </div>
                 
                 <div className="sticky top-0 z-40 py-4 bg-white/90 backdrop-blur-md border-y border-gray-100 mb-16">
-                    <div className="max-w-7xl mx-auto px-6 text-center">
-                        <div className="flex flex-wrap justify-center gap-8 text-sm font-bold text-gray-800 uppercase tracking-widest bg-[#FFFBEB] py-3 px-8 rounded-full inline-block">
+                    <div className="text-center">
+                        <div className="flex flex-wrap justify-center gap-10 md:gap-16 text-sm font-bold text-gray-800 uppercase tracking-widest bg-[#FFFBEB] py-3 px-8 rounded-full inline-block">
                             <span>Energy Efficiency</span>
-                            <span className="hidden md:inline text-gray-400">•</span>
                             <span>Carbon Footprint</span>
-                            <span className="hidden md:inline text-gray-400">•</span>
                             <span>Water Conservation</span>
-                            <span className="hidden md:inline text-gray-400">•</span>
                             <span>Waste Management</span>
-                            <span className="hidden md:inline text-gray-400">•</span>
                             <span>Biodiversity</span>
-                            <span className="hidden md:inline text-gray-400">•</span>
                             <span>Cleaning Drives</span>
                         </div>
                     </div>
                 </div>
 
-                <div className="max-w-7xl mx-auto space-y-24 px-6">
+                <div className="space-y-24 px-6 md:px-[55px]">
                     {focusAreas.map((area, index) => (
                         <motion.div 
                             key={index} 
@@ -300,8 +295,8 @@ export default function Sustainability() {
             </section>
 
             {/* Cleaning Drives & Bottom Section */}
-            <section className="py-24 px-6 md:px-24 bg-white border-t border-gray-100">
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16 mb-24">
+            <section className="py-24 bg-white border-t border-gray-100 px-6 md:px-[55px]">
+                <div className="flex flex-col md:flex-row items-center gap-16 mb-24">
                     <div className="flex-1 relative w-full h-[400px] rounded-sm overflow-hidden">
                         <Image
                             src={Blog2.src}
@@ -322,8 +317,8 @@ export default function Sustainability() {
                 </div>
 
                 {/* Bottom Brand Cards */}
-                <div className="bg-[#FFFBEB] py-16 -mx-6 md:-mx-24 px-6 md:px-24">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto items-start">
+                <div className="bg-[#FFFBEB] py-24 -mx-6 md:-mx-[55px]">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6 md:px-12 items-stretch">
                         {[
                             { title: "Sustainability", desc: "Living in harmony with nature and our community", image: Blog1.src },
                             { title: "Culture", desc: "A community of forward-thinkers and go-getters", image: Blog2.src },
@@ -337,16 +332,14 @@ export default function Sustainability() {
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
                                 whileHover={{ y: -10 }}
-                                className="flex flex-col bg-white shadow-lg rounded-sm overflow-hidden group cursor-pointer"
+                                className="flex flex-col bg-white shadow-lg rounded-sm overflow-hidden group cursor-pointer h-full"
                             >
-                                <div className={`relative w-full overflow-hidden transition-all duration-500 ${
-                                    index === 0 || index === 3 ? 'h-[350px] md:h-[450px]' : 'h-[250px] md:h-[280px]'
-                                }`}>
+                                <div className="relative w-full h-[250px] md:h-[300px] overflow-hidden">
                                     <Image src={item.image} alt={item.title} fill className="object-cover transition-transform group-hover:scale-110 duration-500" />
                                 </div>
-                                <div className="text-center py-8 px-6 flex flex-col items-center flex-grow">
-                                    <h4 className="font-bold text-2xl mb-4">{item.title}</h4>
-                                    <p className="text-sm text-gray-700 leading-relaxed max-w-[200px]">{item.desc}</p>
+                                <div className="text-center py-8 px-6 flex flex-col items-center justify-center flex-grow">
+                                    <h4 className="font-bold text-xl mb-4">{item.title}</h4>
+                                    <p className="text-xs text-gray-600 leading-relaxed max-w-[180px]">{item.desc}</p>
                                 </div>
                             </motion.div>
                         ))}

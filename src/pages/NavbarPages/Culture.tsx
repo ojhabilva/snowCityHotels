@@ -20,13 +20,13 @@ export default function Culture() {
                     className="w-full h-auto"
                     priority
                 />
-                <div className="absolute inset-0 bg-black/30" />
-                <div className="absolute inset-0 flex flex-col items-center justify-between py-16 md:py-24 text-white">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute inset-0 flex flex-col items-center justify-end pb-24 text-white">
                     <motion.h1 
-                        initial={{ opacity: 0, y: -20 }}
+                        initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
-                        className="relative z-10 text-[50px] md:text-[70px] font-semibold leading-tight font-poppins"
+                        className="relative z-10 text-[50px] md:text-[80px] font-bold leading-tight font-poppins mb-2"
                     >
                         Culture
                     </motion.h1>
@@ -34,7 +34,7 @@ export default function Culture() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.2 }}
-                        className="relative z-10 text-[22px] md:text-[32px] font-medium font-poppins"
+                        className="relative z-10 text-[18px] md:text-[25px] font-medium font-poppins text-center max-w-2xl px-6"
                     >
                         Inclusivity, Balance, and Holistic Well-being
                     </motion.p>
@@ -182,9 +182,9 @@ export default function Culture() {
                 </div>
             </section>
 
-            {/* Bottom Section - Brand Cards */}
-            <section className="bg-[#FFFBEB] py-20">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto px-6 items-start">
+            {/* Bottom Brand Cards Section */}
+            <section className="bg-[#FFFBEB] py-24">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-0 items-stretch">
                     {[
                         { title: "Sustainability", desc: "Living in harmony with nature and our community", image: Blog1.src },
                         { title: "Culture", desc: "A community of forward-thinkers and go-getters", image: Blog2.src },
@@ -198,16 +198,14 @@ export default function Culture() {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                             whileHover={{ y: -10 }}
-                            className="flex flex-col bg-white shadow-lg rounded-sm overflow-hidden group cursor-pointer"
+                            className="flex flex-col bg-white shadow-lg rounded-sm overflow-hidden group cursor-pointer h-full"
                         >
-                            <div className={`relative w-full overflow-hidden transition-all duration-500 ${
-                                index === 0 || index === 3 ? 'h-[350px] md:h-[450px]' : 'h-[250px] md:h-[280px]'
-                            }`}>
+                            <div className="relative w-full h-[250px] md:h-[300px] overflow-hidden">
                                 <Image src={item.image} alt={item.title} fill className="object-cover transition-transform group-hover:scale-110 duration-500" />
                             </div>
-                            <div className="text-center py-8 px-6 flex flex-col items-center flex-grow">
-                                <h4 className="font-bold text-2xl mb-4">{item.title}</h4>
-                                <p className="text-sm text-gray-700 leading-relaxed max-w-[200px]">{item.desc}</p>
+                            <div className="text-center py-8 px-6 flex flex-col items-center justify-center flex-grow">
+                                <h4 className="font-bold text-xl mb-4">{item.title}</h4>
+                                <p className="text-xs text-gray-600 leading-relaxed max-w-[180px]">{item.desc}</p>
                             </div>
                         </motion.div>
                     ))}

@@ -1,7 +1,8 @@
 "use client";
 
 import { AboutUs1, AboutUs2, AboutUs3, AboutUsBG, Blog1, Blog2, Blog3, Blog4, NavbarLogo } from "@/constent/graphic";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
+import Image from "next/image";
 
 export default function AboutUs() {
     const fadeIn: Variants = {
@@ -49,7 +50,7 @@ export default function AboutUs() {
                 {/* Gradient Overlay */}
                 {/* <div className="absolute inset-0 bg-gradient-to-t from-[#486221]/100 via-[#486221]/30 to-black/20" /> */}
 
-                <p className="absolute top-30 left-1/2 -translate-x-1/2 -translate-y-1/2 text-sm md:text-5xl mb-2 opacity-90">
+                <p className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-sm md:text-5xl mb-2 opacity-90">
                     About us
                 </p>
                 {/* Content */}
@@ -60,7 +61,7 @@ export default function AboutUs() {
                     className="relative h-full flex justify-center items-center max-w-[1400px] px-6"
                 >
 
-                    <p className="max-w-5xl text-sm md:text-base font-bold text-shadow-lg lg:text-4xl leading-relaxed text-center opacity-90">
+                    <p className="max-w-5xl text-sm md:text-base font-bold [text-shadow:_0_4px_8px_rgba(0,0,0,0.5)] lg:text-4xl leading-relaxed text-center opacity-90">
                         The essence of our brand is rooted in bringing different
                         elements together in perfect balance.
                     </p>
@@ -77,7 +78,7 @@ export default function AboutUs() {
                         whileInView="show"
                         viewport={{ once: true }}
                         variants={fadeIn}
-                        className="max-w-2xl mx-auto text-gray-600 text-sm md:text-lg leading-relaxed mb-18"
+                        className="max-w-2xl mx-auto text-gray-600 text-sm md:text-lg leading-relaxed mb-16"
                     >
                         At Snow City Stays, we bring a fresh perspective to hospitality by combining attentive service with responsible, sustainable practices. Inspired by the scenic charm of Manali and the lifestyle of the Himalayas, we merge natural beauty with contemporary comfort—creating spaces where every stay becomes a memorable experience.
                     </motion.p>
@@ -199,8 +200,8 @@ export default function AboutUs() {
                             className="flex justify-center"
                         >
                             <div className="bg-[#4b6b2c] w-[250px] h-[200px] flex items-center justify-center shadow-lg">
-                                <img
-                                    src={NavbarLogo.src}
+                                <Image
+                                    src={NavbarLogo}
                                     alt="Snow City"
                                     width={120}
                                     height={120}
@@ -227,7 +228,7 @@ export default function AboutUs() {
                         A team driven by ideas, passion, and purpose.
                     </motion.h2>
 
-                    <div className="grid md:grid-cols-[1fr_3fr] gap-14 items-center text-left">
+                    <div className="grid md:grid-cols-[1fr_3fr] gap-12 items-center text-left">
 
                         {/* LEFT IMAGE */}
                         <motion.div

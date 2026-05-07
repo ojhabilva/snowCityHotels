@@ -205,8 +205,8 @@ export default function Sustainability() {
             </section>
 
             {/* Current Progress Section */}
-            <section className="bg-[#FFFBEB] pt-20 px-6 md:px-[55px]">
-                <div>
+            <section className="bg-[#FFFBEB] pt-20">
+                <div className="px-6 md:px-[55px]">
                     <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">Current Progress</h2>
                     
                     <div className="flex flex-col gap-y-4 text-[22px] font-normal text-black mb-16">
@@ -226,7 +226,7 @@ export default function Sustainability() {
                     </div>
                 </div>
                 
-                <div className="relative w-full h-[400px] md:h-[600px] overflow-hidden -mx-6 md:-mx-[55px]">
+                <div className="relative w-full h-[400px] md:h-[600px] overflow-hidden">
                     <Image
                         src={HistorySectionbg.src}
                         alt="Resort Progress"
@@ -245,13 +245,13 @@ export default function Sustainability() {
                 
                 <div className="sticky top-0 z-40 py-4 bg-white/90 backdrop-blur-md border-y border-gray-100 mb-16">
                     <div className="text-center">
-                        <div className="flex flex-wrap justify-center gap-10 md:gap-16 text-sm font-bold text-gray-800 uppercase tracking-widest bg-[#FFFBEB] py-3 px-8 rounded-full inline-block">
-                            <span>Energy Efficiency</span>
-                            <span>Carbon Footprint</span>
-                            <span>Water Conservation</span>
-                            <span>Waste Management</span>
-                            <span>Biodiversity</span>
-                            <span>Cleaning Drives</span>
+                        <div className="flex flex-wrap justify-center gap-10 md:gap-24 text-sm font-bold text-gray-800 uppercase tracking-widest bg-[#FFFBEB] py-4 px-12 rounded-full inline-block">
+                            <span>Energy Efficiency &nbsp; &nbsp;&nbsp;</span>
+                            <span>Carbon Footprint&nbsp;&nbsp; &nbsp;</span>
+                            <span>Water Conservation&nbsp;&nbsp;&nbsp;</span>
+                            <span>Waste Management&nbsp;&nbsp;&nbsp; </span>
+                            <span>Biodiversity&nbsp;&nbsp;&nbsp;</span>
+                            <span>Cleaning Drives&nbsp;&nbsp;&nbsp;</span>
                         </div>
                     </div>
                 </div>
@@ -295,8 +295,8 @@ export default function Sustainability() {
             </section>
 
             {/* Cleaning Drives & Bottom Section */}
-            <section className="py-24 bg-white border-t border-gray-100 px-6 md:px-[55px]">
-                <div className="flex flex-col md:flex-row items-center gap-16 mb-24">
+            <section className="py-24 bg-white border-t border-gray-100">
+                <div className="px-6 md:px-[55px] flex flex-col md:flex-row items-center gap-16 mb-24">
                     <div className="flex-1 relative w-full h-[400px] rounded-sm overflow-hidden">
                         <Image
                             src={Blog2.src}
@@ -317,8 +317,8 @@ export default function Sustainability() {
                 </div>
 
                 {/* Bottom Brand Cards */}
-                <div className="bg-[#FFFBEB] py-24 -mx-6 md:-mx-[55px]">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6 md:px-12 items-stretch">
+                <div className="bg-[#FFFBEB] py-24">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-0 items-stretch">
                         {[
                             { title: "Sustainability", desc: "Living in harmony with nature and our community", image: Blog1.src },
                             { title: "Culture", desc: "A community of forward-thinkers and go-getters", image: Blog2.src },

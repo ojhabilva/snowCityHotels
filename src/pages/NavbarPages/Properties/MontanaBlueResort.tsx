@@ -16,7 +16,7 @@ export default function MontanaBlueResort() {
             desc: "Surrounded by the fragrant apple orchards of Himachal, Snow City Stays, Manali offers a calm retreat for travelers seeking comfort and relaxation. Nestled in the charming town of Haripur, it presents a peaceful escape embraced by natural beauty...",
         },
         {
-            title: "Montana Blue Resort (Manali)",
+            title: "Montana Blues (Manali)",
             image: Property2.src,
             desc: "Perched amidst the scenic heights of Manali, Snow City Stays offers captivating views of the surrounding valleys and mountains. Surrounded by lush landscapes and fresh mountain air, this peaceful retreat creates a relaxing and immersive experience...",
         },
@@ -63,9 +63,9 @@ export default function MontanaBlueResort() {
 
                 {/* DESCRIPTION */}
                 <div className="max-w-6xl mx-auto text-center px-6 py-10 text-gray-700 text-sm md:text-xl leading-relaxed">
-                    Welcome to Montana Blue Resort, a thoughtfully curated boutique retreat offering a distinctive and independent stay experience. Every corner of the resort reflects its own unique charm,
+                    Welcome to Montana Blues, a thoughtfully curated boutique retreat offering a distinctive and independent stay experience. Every corner of the resort reflects its own unique charm,
                     creating a stay that feels truly special.
-                    At Montana Blue Resort, we are dedicated to delivering exceptional
+                    At Montana Blues, we are dedicated to delivering exceptional
                     service and premium comforts, ensuring every guest enjoys a memorable and
                     seamless experience. Our commitment is to provide excellence in every detail—creating moments and memories you’ll cherish long after your stay.
                 </div>

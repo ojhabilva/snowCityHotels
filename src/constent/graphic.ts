@@ -67,6 +67,8 @@ import Shivalaya1 from "../assets/Shivalaya/f11e85733337c7bd82434b937148ebace87c
 import NosingleUsePlastic from "../assets/NosingleUsePlastic.png"
 import ContactPageLogo from "../assets/SNOW CITY STAYS LOGOS-19 1.png"
 import EmailIcon from "../assets/email-address-svgrepo-com 1 (1).png"
+import Promo from "../assets/InfoDesk/Frame 276.png"
+import Promo1 from "../assets/InfoDesk/Frame 295.png"
 
 export {
     Property1, Property2, Property3, Property4, Property1Hover, Property2Hover, Property3Hover, Property4Hover, PropertyRoom,
@@ -91,4 +93,5 @@ export {
     NosingleUsePlastic,
     ContactPageLogo,
     EmailIcon,
+    Promo, Promo1,
 };

@@ -16,7 +16,7 @@ export default function NatureHouse() {
             desc: "Surrounded by the fragrant apple orchards of Himachal, Snow City Stays, Manali offers a calm retreat for travelers seeking comfort and relaxation. Nestled in the charming town of Haripur, it presents a peaceful escape embraced by natural beauty...",
         },
         {
-            title: "Montana Blue Resort (Manali)",
+            title: "Montana Blues (Manali)",
             image: Property2.src,
             desc: "Perched amidst the scenic heights of Manali, Snow City Stays offers captivating views of the surrounding valleys and mountains. Surrounded by lush landscapes and fresh mountain air, this peaceful retreat creates a relaxing and immersive experience...",
         },
@@ -56,13 +56,13 @@ export default function NatureHouse() {
 
     return (
         <>
-            <section className="w-full bg-white">
+            <section className="w-full bg-[#f5f5f5]">
 
                 {/* HERO IMAGE */}
                 <HeroSection image="/heroSection/Welcome to1.mp4" />
 
                 {/* BOOKING BAR */}
-                <BookingBar slug="nature-house" />
+                <BookingBar />
 
                 {/* DESCRIPTION */}
                 <div className="max-w-6xl mx-auto text-center px-6 py-10 text-gray-700 text-sm md:text-xl leading-relaxed">
@@ -77,7 +77,7 @@ export default function NatureHouse() {
 
                 {/* ===== TOP BANNER ===== */}
                 <SectionHeader dir="justify-start" title="Snow City Stays" />
-                <div className="grid md:grid-cols-3 gap-14">
+                <div className="grid md:grid-cols-3 gap-6">
                     {stays.map((item) => (
                         <StayCard key={item.title} item={item} />
                     ))}
@@ -85,17 +85,17 @@ export default function NatureHouse() {
 
             </section>
 
-            <section className="w-full bg-white px-6 md:px-16 py-10">
+            <section className="w-full  bg-white px-6 md:px-16 py-10">
                 <OffersBanner image={NatureHouse1.src} />
             </section>
 
-            <section className="w-full bg-white py-16 px-6 md:px-16">
+            <section className="w-full  bg-white pt-16 px-6 md:px-16">
 
                 {/* Header */}
                 <SectionHeader title="Latest Post" />
 
                 {/* Cards */}
-                <div className="grid text-black md:grid-cols-3 gap-14 mb-3">
+                <div className="grid text-black md:grid-cols-3 gap-10">
                     {posts.map((post) => (
                         <BlogCard key={post.id} post={post} />
                     ))}

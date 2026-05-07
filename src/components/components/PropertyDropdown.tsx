@@ -15,7 +15,7 @@ export default function PropertyDropdown({ onSelect, className }: PropertyDropdo
 
     const data = [
         { title: "Nature House", subtitle: "(Rana Cottage)", image: Property1.src },
-        { title: "Montana Blue Resort", subtitle: "(Manali)", image: Property3.src },
+        { title: "Montana Blues", subtitle: "(Manali)", image: Property3.src },
         { title: "Baan", subtitle: "(Snow City Stays)", image: Property2.src },
         { title: "Shivalaya", subtitle: "(Snow City Stays)", image: Property4.src },
     ];
@@ -58,7 +58,7 @@ export default function PropertyDropdown({ onSelect, className }: PropertyDropdo
                                     }}
                                 >
                                     <div className="text-black">
-                                        <h3 className="text-lg font-bold tracking-tight">
+                                        <h3 className="text-lg tracking-tight">
                                             {item.title}
                                         </h3>
                                         <p className="text-gray-600 text-xs font-normal">

@@ -8,7 +8,7 @@ export default function PropertiesPopup({ show, onClose }) {
     const data = [
         { title: "Nature House", subtitle: "(Rana Cottage)", image: Property1.src, url: "/Properties/NatureHouse" },
         { title: "Baan", subtitle: "(Snow City Stays)", image: Property2.src, url: "/Properties/Baan" },
-        { title: "Montana Blue Resort", subtitle: "(Manali)", image: Property3.src, url: "/Properties/MontanaBlueResort" },
+        { title: "Montana Blues", subtitle: "(Manali)", image: Property3.src, url: "/Properties/MontanaBlueResort" },
         { title: "Shivalaya", subtitle: "(Snow City Stays)", image: Property4.src, url: "/Properties/Shivalaya" },
     ];
 
@@ -34,11 +34,11 @@ export default function PropertiesPopup({ show, onClose }) {
 
             {/* PANEL */}
             <div
-                className={`absolute top-[90px] left-1/2 -translate-x-1/2 w-[90%] md:w-[40%] transition-all duration-500 ${show ? "translate-y-0" : "-translate-y-10"
+                className={`absolute top-[90px] left-1/2 -translate-x-1/2 w-[90%] lg:w-[40%] transition-all duration-500 ${show ? "translate-y-0" : "-translate-y-10"
                     }`}
                 onClick={(e) => e.stopPropagation()} // 👈 prevent close when clicking inside
             >
-                <div className="bg-[#486221]/50 backdrop-blur-xl border border-white/20 rounded-b-xl shadow-2xl p-8">
+                <div className="bg-[#486221] backdrop-blur-xl border border-white/20 rounded-b-xl shadow-2xl p-8">
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
@@ -55,7 +55,7 @@ export default function PropertiesPopup({ show, onClose }) {
 
                                     {/* Text */}
                                     <div className="text-white">
-                                        <h3 className="text-lg font-semibold">
+                                        <h3 className="text-md font-semibold">
                                             {item.title}
                                         </h3>
                                         <p className="opacity-80 text-sm">

@@ -1,14 +1,14 @@
 "use client";
 
-import { 
+import {
     Blog1, Blog2, Blog3, Blog4, HistorySectionbg, NavbarLogo,
     Adv1, Adv4, PropertyRoom, Shivalaya1, InfoDesk2, NatureHouse3, MontanaBG,
     NosingleUsePlastic
 } from "@/constent/graphic";
 import Image from "next/image";
-import { 
-    FaLightbulb, FaTrash, FaWineBottle, FaBan, FaLeaf, 
-    FaStore, FaFileAlt, FaSun, FaUsers, FaChalkboardTeacher 
+import {
+    FaLightbulb, FaTrash, FaWineBottle, FaBan, FaLeaf,
+    FaStore, FaFileAlt, FaSun, FaUsers, FaChalkboardTeacher
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -35,32 +35,32 @@ export default function Sustainability() {
         {
             title: "Energy Efficiency",
             desc: "We use smart technologies and thoughtful design to minimise energy use. Wherever possible, we incorporate renewable energy sources—ensuring our guests enjoy a more responsible and refined stay. Encouraging low-impact choices, such as using bicycles for short distances, is one of the many ways we work to reduce overall energy consumption.",
-            image: Shivalaya1.src 
+            image: Shivalaya1.src
         },
         {
             title: "Carbon Footprint Reduction",
             desc: "Guided by global sustainability goals, we are committed to lowering our carbon emissions through responsible practices. Initiatives such as adopting electric vehicles wherever possible and improving operational efficiency help us move steadily toward a lower-impact future.",
-            image: NatureHouse3.src 
+            image: NatureHouse3.src
         },
         {
             title: "Electricity & Water Conservation",
             desc: "Water is a vital resource, and we are committed to using it responsibly. Through simple, everyday conservation practices, we aim to reduce consumption while inviting our guests to be part of the effort. In-room messages encourage the reuse of linens and towels, helping to lower water usage and reduce the energy required for laundry—creating a more efficient and mindful approach overall.",
-            image: NatureHouse3.src 
+            image: NatureHouse3.src
         },
         {
             title: "Waste Management",
             desc: "From phasing out single-use plastics to responsibly managing food waste, we ensure that all waste is carefully handled, stored, and disposed of with minimal environmental impact.",
-            image: PropertyRoom.src 
+            image: PropertyRoom.src
         },
         {
             title: "Paperless Operations",
             desc: "We aim to operate with minimal reliance on paper, reducing the environmental impact linked to its use and disposal. By adopting e-billing, we have significantly lowered paper consumption. This approach extends across guest services, administrative processes, and communication channels, supporting a more efficient and responsible way of working.",
-            image: InfoDesk2.src 
+            image: InfoDesk2.src
         },
         {
             title: "Biodiversity Protection",
             desc: "The natural environment lies at the heart of the Snow City Stays experience. We actively work to understand and protect the biodiversity surrounding our properties, ensuring we operate in harmony with the local ecosystem while helping preserve it for generations to come.",
-            image: MontanaBG.src 
+            image: MontanaBG.src
         },
         {
             title: "Cleaning Drives",
@@ -91,10 +91,10 @@ export default function Sustainability() {
             {/* Introduction Section */}
             <section className="pt-16 pb-0 px-6 md:px-[131px] text-center">
                 <p className="text-lg md:text-xl leading-relaxed text-gray-700">
-                    As an integral part of the local community, Snow City Stays is dedicated to being an environmentally 
-                    responsible neighbor. We actively engage in sustainability initiatives, support conservation efforts, 
+                    As an integral part of the local community, Snow City Stays is dedicated to being an environmentally
+                    responsible neighbor. We actively engage in sustainability initiatives, support conservation efforts,
                     and contribute to the well-being of the community around us. <br /><br />
-                    We are also committed to maintaining transparency in our environmental journey—regularly sharing 
+                    We are also committed to maintaining transparency in our environmental journey—regularly sharing
                     our progress, achievements, and future goals with our guests and stakeholders each year.
                 </p>
             </section>
@@ -107,17 +107,17 @@ export default function Sustainability() {
                     <div className="space-y-6">
                         <div className="h-px bg-gray-300 w-full mb-6" />
                         <p className="text-lg leading-relaxed text-gray-800">
-                            Marking 10 years in 2025, Snow City Stays believes that true luxury is rooted in a deep respect for 
-                            nature and a commitment to sustainable living. We strive to encourage responsible travel and tourism 
-                            through our environmental initiatives, both within our properties and across the regions we proudly 
+                            Marking 10 years in 2025, Snow City Stays believes that true luxury is rooted in a deep respect for
+                            nature and a commitment to sustainable living. We strive to encourage responsible travel and tourism
+                            through our environmental initiatives, both within our properties and across the regions we proudly
                             call home.
                         </p>
                     </div>
                     <div className="space-y-6">
                         <div className="h-px bg-gray-300 w-full mb-6" />
                         <p className="text-lg leading-relaxed text-gray-800">
-                            Nestled within a unique natural setting, we recognise our responsibility to act as careful 
-                            stewards of the environment—preserving biodiversity while safeguarding the rich natural and 
+                            Nestled within a unique natural setting, we recognise our responsibility to act as careful
+                            stewards of the environment—preserving biodiversity while safeguarding the rich natural and
                             cultural heritage of the communities in which we operate.
                         </p>
                     </div>
@@ -125,7 +125,7 @@ export default function Sustainability() {
                 <div className="mt-12 border-t border-gray-300 pt-8">
                     <h3 className="text-2xl font-bold mb-4">At Snow City Stays</h3>
                     <p className="text-lg leading-relaxed text-gray-800">
-                        We are committed to operating in a way that contributes to a sustainable future for our planet, while creating 
+                        We are committed to operating in a way that contributes to a sustainable future for our planet, while creating
                         heartfelt experiences for our guests and meaningful opportunities for our team members.
                     </p>
                 </div>
@@ -137,8 +137,8 @@ export default function Sustainability() {
                     Reimagining the harmony between Luxury and Sustainability
                 </h2>
                 <p className="text-lg text-gray-600 mb-16 px-6 md:px-[123px]">
-                    From impactful initiatives like comprehensive waste management to mindful choices such as 
-                    eliminating single-use plastics—every step we take is guided by our commitment to a greener future. 
+                    From impactful initiatives like comprehensive waste management to mindful choices such as
+                    eliminating single-use plastics—every step we take is guided by our commitment to a greener future.
                     Our guests don't just enjoy refined comfort; they become part of a journey toward a more sustainable world.
                 </p>
 
@@ -147,8 +147,8 @@ export default function Sustainability() {
                         <span className="text-xl font-bold mb-4 block">01.</span>
                         <h4 className="text-2xl font-bold mb-6">Compliance</h4>
                         <p className="text-gray-700 leading-relaxed">
-                            Our commitment extends beyond meeting regulations. We strive to surpass both national and local 
-                            environmental standards, holding ourselves to a higher level of responsibility and accountability in 
+                            Our commitment extends beyond meeting regulations. We strive to surpass both national and local
+                            environmental standards, holding ourselves to a higher level of responsibility and accountability in
                             every action we take.
                         </p>
                     </div>
@@ -156,7 +156,7 @@ export default function Sustainability() {
                         <span className="text-xl font-bold mb-4 block">02.</span>
                         <h4 className="text-2xl font-bold mb-6">Sustainable Management</h4>
                         <p className="text-gray-700 leading-relaxed">
-                            We are committed to building a cohesive sustainability management system that ensures efficient use of resources, 
+                            We are committed to building a cohesive sustainability management system that ensures efficient use of resources,
                             reduces waste, and promotes responsible energy practices—carefully aligned with our unique operational footprint.
                         </p>
                     </div>
@@ -164,7 +164,7 @@ export default function Sustainability() {
                         <span className="text-xl font-bold mb-4 block">03.</span>
                         <h4 className="text-2xl font-bold mb-6">Continuous Improvement</h4>
                         <p className="opacity-90 leading-relaxed">
-                            We are committed to regularly reviewing and refining our environmental practices, setting progressive annual goals, 
+                            We are committed to regularly reviewing and refining our environmental practices, setting progressive annual goals,
                             and actively working to reduce our carbon footprint year after year.
                         </p>
                     </div>
@@ -176,15 +176,15 @@ export default function Sustainability() {
                 <div className="text-center">
                     <h2 className="text-3xl md:text-5xl font-bold mb-6 px-6 md:px-[55px]">Key Achievements</h2>
                     <p className="text-lg text-gray-600 mb-16 px-6 md:px-[123px]">
-                        Sustainability lies at the heart of our operations, with full adoption across key areas creating a strong 
-                        foundation for long-term impact. These milestones reflect our dedication to responsible growth and a 
+                        Sustainability lies at the heart of our operations, with full adoption across key areas creating a strong
+                        foundation for long-term impact. These milestones reflect our dedication to responsible growth and a
                         more sustainable future.
                     </p>
 
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-4 px-6 md:px-[55px]">
                         {achievements.map((item, index) => (
-                            <motion.div 
-                                key={index} 
+                            <motion.div
+                                key={index}
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
@@ -208,7 +208,7 @@ export default function Sustainability() {
             <section className="bg-[#FFFBEB] pt-20">
                 <div className="px-6 md:px-[55px]">
                     <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">Current Progress</h2>
-                    
+
                     <div className="flex flex-col gap-y-4 text-[22px] font-normal text-black mb-16">
                         {[
                             { name: "1. Rainwater Harvesting", status: "nearing completion (70%)" },
@@ -225,7 +225,7 @@ export default function Sustainability() {
                         ))}
                     </div>
                 </div>
-                
+
                 <div className="relative w-full h-[400px] md:h-[600px] overflow-hidden">
                     <Image
                         src={HistorySectionbg.src}
@@ -242,7 +242,7 @@ export default function Sustainability() {
                     <h2 className="text-3xl md:text-5xl font-bold mb-6">Focus Areas</h2>
                     <p className="text-lg text-gray-600 mb-8">We prioritise the following key areas across our value chain:</p>
                 </div>
-                
+
                 <div className="sticky top-0 z-40 py-4 bg-white/90 backdrop-blur-md border-y border-gray-100 mb-16">
                     <div className="text-center">
                         <div className="flex flex-wrap justify-center gap-10 md:gap-24 text-sm font-bold text-gray-800 uppercase tracking-widest bg-[#FFFBEB] py-4 px-12 rounded-full inline-block">
@@ -258,8 +258,8 @@ export default function Sustainability() {
 
                 <div className="space-y-24 px-6 md:px-[55px]">
                     {focusAreas.map((area, index) => (
-                        <motion.div 
-                            key={index} 
+                        <motion.div
+                            key={index}
                             initial="hidden"
                             whileInView="show"
                             viewport={{ once: true, amount: 0.3 }}
@@ -276,10 +276,10 @@ export default function Sustainability() {
                                 </p>
                             </div>
                             <div className="flex-1 flex justify-center">
-                                <motion.div 
+                                <motion.div
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.4 }}
-                                    className="relative w-full max-w-[500px] aspect-[4/3] rounded-[100px] overflow-hidden shadow-lg cursor-pointer"
+                                    className="relative w-full h-[300px] max-w-[600px] aspect-[4/3] rounded-[150px] overflow-hidden shadow-lg cursor-pointer"
                                 >
                                     <Image
                                         src={area.image}
@@ -299,7 +299,7 @@ export default function Sustainability() {
                 <div className="px-6 md:px-[55px] flex flex-col md:flex-row items-center gap-16 mb-24">
                     <div className="flex-1 relative w-full h-[400px] rounded-sm overflow-hidden">
                         <Image
-                            src={Blog2.src}
+                            src={NatureHouse3.src}
                             alt="Cleaning Drive"
                             fill
                             className="object-cover"
@@ -309,8 +309,8 @@ export default function Sustainability() {
                         <h3 className="text-3xl font-bold">Snow City Stays</h3>
                         <p className="text-[#486221] font-semibold tracking-widest uppercase text-sm">Sustainability Policy</p>
                         <p className="text-lg text-gray-700 leading-relaxed text-justify">
-                            Our 2024 Progress Report highlights the strides we've made so far and outlines our vision for the years ahead. 
-                            While it reflects long-standing efforts built over time, the report places particular focus on initiatives 
+                            Our 2024 Progress Report highlights the strides we've made so far and outlines our vision for the years ahead.
+                            While it reflects long-standing efforts built over time, the report places particular focus on initiatives
                             and achievements from the year ending December 31, 2024.
                         </p>
                     </div>
@@ -325,8 +325,8 @@ export default function Sustainability() {
                             { title: "History", desc: "A community of forward-thinkers and go-getters", image: Blog3.src },
                             { title: "Explore", desc: "A community of forward-thinkers and go-getters", image: Blog4.src },
                         ].map((item, index) => (
-                            <motion.div 
-                                key={index} 
+                            <motion.div
+                                key={index}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}

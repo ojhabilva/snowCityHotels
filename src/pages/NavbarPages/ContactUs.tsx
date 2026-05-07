@@ -9,23 +9,23 @@ export default function ContactUs() {
     return (
         <div className="bg-[#f2f2f2] min-h-screen font-poppins">
             {/* Hero Section */}
-            <section className="relative w-full h-[350px] md:h-[480px] overflow-hidden">
+            <section className="relative w-full h-[350px] md:h-[85vh] overflow-hidden">
                 <Image
                     src={Shivalaya1}
                     alt="Contact Us Background"
                     fill
-                    className="object-cover object-top"
+                    className="object-cover"
                     priority
                 />
 
                 <div className="absolute inset-0 bg-black/40" />
 
                 <div className="absolute inset-0 flex flex-col items-center justify-start pt-20 md:pt-28 text-white">
-                    <motion.h1 
+                    <motion.h1
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
-                        className="relative z-10 text-[35px] md:text-[65px] font-bold tracking-tight [text-shadow:_0_2px_10px_rgba(0,0,0,0.5)]"
+                        className="relative z-1 text-[35px] md:text-[65px] font-bold tracking-tight [text-shadow:_0_2px_10px_rgba(0,0,0,0.5)]"
                     >
                         Contact Us
                     </motion.h1>
@@ -34,12 +34,12 @@ export default function ContactUs() {
 
             {/* Main Content Section */}
             <section className="w-full py-12 px-4 md:px-6 lg:px-8 max-w-[1650px] mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_2fr] gap-8 md:gap-12 items-stretch">
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 md:gap-12 items-stretch">
 
                     {/* LEFT COLUMN */}
                     <div className="flex flex-col space-y-6 h-full">
                         {/* Contact Info Card */}
-                        <div className="bg-white p-8 rounded-sm shadow-sm border border-gray-100">
+                        <div className="bg-white rounded-sm border shadow-2xl border-gray-100">
                             <div className="mb-8">
                                 <img
                                     src={ContactPageLogo.src}
@@ -48,7 +48,7 @@ export default function ContactUs() {
                                 />
                             </div>
 
-                            <div className="space-y-5">
+                            <div className="space-y-5 m-8">
                                 <div className="flex items-start gap-3">
                                     <FaMapMarkerAlt className="text-[#333] mt-1.5 text-lg flex-shrink-0" />
                                     <p className="text-[#333] text-[18px] font-normal leading-snug">
@@ -71,9 +71,9 @@ export default function ContactUs() {
                         </div>
 
                         {/* Map Card */}
-                        <div className="bg-white p-4 rounded-sm shadow-sm border border-gray-100 flex flex-col">
-                            <p className="text-[18px] font-bold mb-3 text-[#333] px-2">Map</p>
-                            <div className="w-full h-[250px] rounded-sm overflow-hidden">
+                        <div className="bg-white h-full rounded-sm shadow-2xl border border-gray-100 flex flex-col">
+
+                            <div className="w-full h-[50vh] rounded-sm overflow-hidden">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.8213233853177!2d77.1891!3d32.2396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3904870000000001%3A0x0!2zMzLCsDE0JzIyLjYiTiA3N8KwMTEnMjAuOCJF!5e0!3m2!1sen!2sin!4v1714986423985!5m2!1sen!2sin"
                                     width="100%"
@@ -87,7 +87,7 @@ export default function ContactUs() {
                     </div>
 
                     {/* RIGHT COLUMN - Inquiry Form */}
-                    <div className="bg-white p-8 md:p-10 rounded-sm shadow-sm border border-gray-100 self-start w-full">
+                    <div className="bg-white p-8 md:p-10 rounded-sm shadow-2xl border border-gray-100 self-start w-full">
                         <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-[#333]">
                             Send Us Your Queries
                         </h2>

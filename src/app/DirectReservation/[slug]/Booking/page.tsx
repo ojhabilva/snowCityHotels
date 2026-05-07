@@ -62,6 +62,9 @@ Set within lush green surroundings and embraced by nature, it is an ideal hideaw
 
 export default function BookingPage() {
     const params = useParams();
+
+    if (!params) return null;
+
     const slug = params.slug as string;
     const data = propertiesData[slug];
 

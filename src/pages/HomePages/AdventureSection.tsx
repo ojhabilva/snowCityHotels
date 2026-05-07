@@ -224,7 +224,7 @@ export default function AdventureSection() {
 
       {/* ── HEADER ── */}
       <div className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 pt-8 sm:pt-10 pb-4 sm:pb-6 px-4">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -232,7 +232,7 @@ export default function AdventureSection() {
         >
           Plan Your Next Holiday
         </motion.h2>
-        <motion.div 
+        <motion.div
           whileHover={{ scale: 1.05 }}
           className="flex items-center border-2 border-white/60 rounded-xl px-4 py-2 w-[220px] sm:w-[260px] shadow-md bg-white/10 backdrop-blur-sm"
         >
@@ -250,7 +250,7 @@ export default function AdventureSection() {
       {/* ── CARDS ── */}
       <div
         className={`relative z-10 flex items-stretch justify-center gap-0 mt-4 sm:mt-6
-          ${isMobile ? "px-0" : "px-6 sm:px-10 md:px-16"}`}
+          ${isMobile ? "px-0 py-20" : "px-6 sm:px-10 md:px-16"}`}
       >
         {activities.map((item, i) => {
           const isActive = i === active;

@@ -56,7 +56,7 @@ export default function Properties() {
                         <img
                             src={item.image}
                             alt={item.title}
-                            className="absolute inset-0 w-full h-full object-cover
+                            className="absolute inset-0 w-full h-full object-cover object-top
                                 transition-all duration-700 group-hover:scale-110 group-hover:opacity-0"
                         />
 

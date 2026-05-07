@@ -38,7 +38,7 @@ export default function AboutUs() {
         <>
             <section className="relative font-poppins w-full h-[60vh] md:h-[80vh] overflow-hidden flex items-center justify-center text-white">
                 {/* Background Image */}
-                <motion.div 
+                <motion.div
                     initial={{ scale: 1.1 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 2 }}
@@ -55,22 +55,22 @@ export default function AboutUs() {
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/30" />
+                <motion.p
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5 }}
+                    className="absolute top-15 text-2xl md:text-6xl mb-6"
+                >
+                    About us
+                </motion.p>
+                <div className="relative text-center px-6">
 
-                <div className="relative z-10 text-center px-6">
-                    <motion.p 
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.5 }}
-                        className="text-sm md:text-xl uppercase tracking-[0.3em] mb-6"
-                    >
-                        About us
-                    </motion.p>
-                    
-                    <motion.h1 
+
+                    <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8 }}
-                        className="max-w-5xl text-2xl md:text-6xl font-bold leading-tight [text-shadow:_0_4px_12px_rgba(0,0,0,0.5)]"
+                        className="max-w-2xl text-md md:text-2xl font-bold leading-tight [text-shadow:_0_4px_12px_rgba(0,0,0,0.5)]"
                     >
                         The essence of our brand is rooted in bringing different
                         elements together in perfect balance.

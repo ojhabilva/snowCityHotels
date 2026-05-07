@@ -13,24 +13,25 @@ export default function Culture() {
     return (
         <div className="bg-white text-black font-poppins">
             {/* Hero Section */}
-            <section className="relative w-full overflow-hidden">
+            <section className="relative w-full h-[85vh] overflow-hidden">
                 <Image
                     src={Blog2}
                     alt="Culture Hero"
-                    className="w-full h-auto"
+                    fill
+                    className="w-full h-auto object-cover"
                     priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/20 to-transparent" />
                 <div className="absolute inset-0 flex flex-col items-center justify-end pb-24 text-white">
-                    <motion.h1 
+                    <motion.h1
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
-                        className="relative z-10 text-[50px] md:text-[80px] font-bold leading-tight font-poppins mb-2"
+                        className="relative text-[50px] md:text-[50px] font-bold leading-tight font-poppins mb-2"
                     >
                         Culture
                     </motion.h1>
-                    <motion.p 
+                    <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.2 }}
@@ -42,25 +43,25 @@ export default function Culture() {
             </section>
 
             {/* Introduction Section */}
-            <section className="py-16 px-6 md:px-24 max-w-6xl mx-auto text-center">
-                <motion.p 
+            <section className="pt-16 px-6 md:px-24 max-w-6xl mx-auto text-center">
+                <motion.p
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true }}
                     variants={fadeIn}
                     className="text-lg md:text-2xl leading-relaxed text-gray-700 font-medium"
                 >
-                    Snow City Stays is a collective of visionaries, creators, and doers. Inspired by the rich cultural heritage 
-                    of the Himalayas, we bring together thoughtful hospitality and nature to craft meaningful, memorable 
-                    stays. Our identity reflects a balance of tradition and modern living, blending local character with 
+                    Snow City Stays is a collective of visionaries, creators, and doers. Inspired by the rich cultural heritage
+                    of the Himalayas, we bring together thoughtful hospitality and nature to craft meaningful, memorable
+                    stays. Our identity reflects a balance of tradition and modern living, blending local character with
                     contemporary design to create a truly distinctive experience.
                 </motion.p>
             </section>
 
             {/* Our Belief Section */}
-            <section className="py-20 px-4 md:px-12 max-w-[1400px] mx-auto">
+            <section className="pt-20 px-4 md:px-12 max-w-[1400px] mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -74,7 +75,7 @@ export default function Culture() {
                             className="object-cover"
                         />
                     </motion.div>
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -83,9 +84,9 @@ export default function Culture() {
                     >
                         <h2 className="text-[30px] font-bold">Our Belief</h2>
                         <p className="text-[19px] leading-relaxed text-gray-800 text-justify">
-                            At Snow City Stays, we believe luxury goes beyond opulence—it is rooted in authenticity, 
-                            sustainability, and meaningful connections. Through personalised service, thoughtful design, 
-                            and a deep respect for the environment, we create a sanctuary that values both people and 
+                            At Snow City Stays, we believe luxury goes beyond opulence—it is rooted in authenticity,
+                            sustainability, and meaningful connections. Through personalised service, thoughtful design,
+                            and a deep respect for the environment, we create a sanctuary that values both people and
                             the planet.
                         </p>
                     </motion.div>
@@ -93,9 +94,9 @@ export default function Culture() {
             </section>
 
             {/* How We Succeed Section */}
-            <section className="py-24 px-6 md:px-24 bg-[#fcfcfc]">
+            <section className="pt-24 px-6 md:px-24 bg-white">
                 <div className="max-w-7xl mx-auto">
-                    <motion.div 
+                    <motion.div
                         initial="hidden"
                         whileInView="show"
                         viewport={{ once: true }}
@@ -114,7 +115,7 @@ export default function Culture() {
                                 { title: "Sustainability :", desc: "Committed to minimizing environmental impact through responsible waste management, effective material recovery practices, and collaboration with organizations such as Healing Himalayas." },
                                 { title: "Innovation :", desc: "Integrating modern technology to streamline operations, improve efficiency, and create exceptional guest experiences with consistently high standards of satisfaction." }
                             ].map((item, idx) => (
-                                <motion.div 
+                                <motion.div
                                     key={idx}
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
@@ -123,14 +124,14 @@ export default function Culture() {
                                     className="space-y-4"
                                 >
                                     <h4 className="text-2xl font-bold border-b-2 border-[#486221] inline-block pb-1">{item.title}</h4>
-                                    <p className="text-gray-700 leading-relaxed">
+                                    <p className="text-gray-700 text-lg leading-relaxed">
                                         {item.desc}
                                     </p>
                                 </motion.div>
                             ))}
                         </div>
 
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
@@ -151,7 +152,7 @@ export default function Culture() {
             {/* Our Approach Section */}
             <section className="py-24 px-4 md:px-12 max-w-[1400px] mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -165,7 +166,7 @@ export default function Culture() {
                             className="object-cover"
                         />
                     </motion.div>
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -173,9 +174,9 @@ export default function Culture() {
                         className="space-y-6"
                     >
                         <h3 className="text-[30px] font-bold">Our Approach</h3>
-                        <p className="text-[19px] leading-relaxed text-gray-800">
-                            We foster an inclusive and balanced culture rooted in well-being for everyone. 
-                            Our diverse team is professionally trained to deliver exceptional service standards, 
+                        <p className="text-xl leading-relaxed text-gray-800">
+                            We foster an inclusive and balanced culture rooted in well-being for everyone.
+                            Our diverse team is professionally trained to deliver exceptional service standards,
                             while staying deeply respectful of the cultural spirit of each destination.
                         </p>
                     </motion.div>
@@ -191,8 +192,8 @@ export default function Culture() {
                         { title: "History", desc: "A community of forward-thinkers and go-getters", image: Blog3.src },
                         { title: "Explore", desc: "A community of forward-thinkers and go-getters", image: Blog4.src },
                     ].map((item, index) => (
-                        <motion.div 
-                            key={index} 
+                        <motion.div
+                            key={index}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}

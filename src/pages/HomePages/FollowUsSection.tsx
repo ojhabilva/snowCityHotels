@@ -9,7 +9,7 @@ import { Property1, Property2, Property3, Property4 } from "@/constent/graphic";
 // Data
 const places = [
     { name: "Nature House", image: Property1.src },
-    { name: "Montana Blue Resort", image: Property2.src },
+    { name: "Montana Blues", image: Property2.src },
     { name: "Baan", image: Property3.src },
     { name: "Shivalaya", image: Property4.src },
 ];
@@ -39,7 +39,7 @@ const item: Variants = {
 
 export default function FollowUsSection() {
     return (
-        <section id="follow" className="w-full bg-white py-10 px-6 overflow-hidden">
+        <section id="follow" className="w-full bg-white py-20 px-6 overflow-hidden">
 
             {/* Heading */}
             <motion.h2

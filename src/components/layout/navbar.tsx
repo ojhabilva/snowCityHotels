@@ -1,15 +1,18 @@
 "use client";
 
+import React from "react";
 import { useState } from "react";
 import { NavbarContactButton, NavbarIcon1, NavbarIcon2, NavbarLogo } from "@/constent/graphic";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
 import PropertiesPopup from "../popups/PropertiesPopup";
+import BlogsPopup from "../popups/BlogsPopup";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
+    const [showBlogsPopup, setShowBlogsPopup] = useState(false);
 
     const navLinkVariants = {
         hover: { scale: 1.05, transition: { duration: 0.2 } }
@@ -60,9 +63,14 @@ export default function Navbar() {
                         </motion.div>
                     </li>
                     <li>
-                        <motion.div whileHover="hover" variants={navLinkVariants}>
-                            <Link href="#blogs" className="hover:text-[#b5a2a2]">Blogs</Link>
-                        </motion.div>
+                        <motion.button
+                            whileHover="hover"
+                            variants={navLinkVariants}
+                            onClick={() => setShowBlogsPopup(true)}
+                            className="hover:text-[#b5a2a2]"
+                        >
+                            Blogs
+                        </motion.button>
                     </li>
                     <li>
                         <motion.div whileHover="hover" variants={navLinkVariants}>
@@ -128,7 +136,12 @@ export default function Navbar() {
                         </button>
                         <Link href="#packages" onClick={() => setOpen(false)} className="hover:translate-x-2 transition-transform">Packages</Link>
                         <Link href="/AboutUs" onClick={() => setOpen(false)} className="hover:translate-x-2 transition-transform">About Us</Link>
-                        <Link href="#blogs" onClick={() => setOpen(false)} className="hover:translate-x-2 transition-transform">Blogs</Link>
+                        <button
+                            onClick={() => { setShowBlogsPopup(true); setOpen(false); }}
+                            className="text-left hover:translate-x-2 transition-transform"
+                        >
+                            Blogs
+                        </button>
                         <Link href="/ContactUs" onClick={() => setOpen(false)} className="hover:translate-x-2 transition-transform">Contact us</Link>
                         <Link href="#follow" onClick={() => setOpen(false)} className="hover:translate-x-2 transition-transform">Faq</Link>
 
@@ -140,7 +153,7 @@ export default function Navbar() {
 
                         <div className="flex gap-6 mt-auto pt-8 border-t border-white/20 justify-center">
                             <img src={NavbarIcon2.src} alt="WhatsApp" className="w-6 h-6" />
-                            <img src={NavbarContactButton.src} alt="Call" className="w-10 h-10" />
+                            <img src={NavbarContactButton.src} alt="Call" className="w-11 h-11 mt-[-9px]" />
                             <img src={NavbarIcon1.src} alt="Gmail" className="w-6 h-6" />
                         </div>
                     </div>
@@ -149,6 +162,10 @@ export default function Navbar() {
             <PropertiesPopup
                 show={showPopup}
                 onClose={() => setShowPopup(false)}
+            />
+            <BlogsPopup
+                show={showBlogsPopup}
+                onClose={() => setShowBlogsPopup(false)}
             />
         </>
     );

@@ -13,6 +13,9 @@ const propertyNames: Record<string, string> = {
 
 export default function DirectReservationPropertyPage() {
     const params = useParams();
+    
+    if (!params) return null;
+
     const slug = params.slug as string;
     const name = propertyNames[slug];
 

@@ -9,7 +9,7 @@ export default function HeroSection({ image }: { image: string }) {
     const isVideo = image.endsWith(".mp4") || image.endsWith(".webm") || image.endsWith(".ogg");
 
     return (
-        <div className="relative flex mb-20 justify-center w-full h-[80vh] md:h-[90vh] overflow-hidden">
+        <div className="relative flex mb-20 justify-center w-full h-[80vh] md:h-[85vh] overflow-hidden">
 
             {/* MEDIA */}
             {isVideo ? (

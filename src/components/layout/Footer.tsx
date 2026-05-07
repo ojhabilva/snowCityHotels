@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="w-full bg-[#486221] text-white px-6 md:px-16 py-5">
+        <footer className="w-full bg-[#486221] text-white px-6 md:px-16 py-7">
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[2fr_1.5fr_1.75fr_1.75fr] gap-8">
 
@@ -69,20 +69,20 @@ export default function Footer() {
                 <div className="flex flex-col gap-3">
 
                     {/* Logo */}
-                    <div className="text-xl mt-[-15] font-bold leading-tight">
+                    <div className="text-xl mt-[-18] font-bold leading-tight">
                         <Image src={NavbarLogo.src} alt="logo" width={100} height={100} />
                     </div>
 
-                    <p className="text-md text-white/80">
+                    <p className="text-md ml-3 text-white/80">
                         Snow City Stays <br />
                         Left Bank Aleo, Manali, Distt. Kullu (H.P.)
                     </p>
 
-                    <p className="text-md text-white/80">
+                    <p className="text-md ml-3 text-white/80">
                         094595-15050 & 089883-15050
                     </p>
 
-                    <p className="text-md text-white/80">
+                    <p className="text-md ml-3 text-white/80">
                         snowcitystays@gmail.com
                     </p>
                 </div>

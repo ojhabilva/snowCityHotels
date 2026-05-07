@@ -20,61 +20,62 @@ const sectionSlide: Variants = {
 
 export default function HistorySection() {
     return (
-        <motion.section
-            id="about"
-            variants={sectionSlide}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.3 }}
-            className="relative w-full min-h-[70vh] md:min-h-[80vh] lg:h-[80vh] overflow-hidden"
-        >
-            {/* Background Image */}
-            <motion.div 
-                style={{ scale: 1.1 }}
-                whileInView={{ scale: 1 }}
-                transition={{ duration: 1.5 }}
-                className="absolute inset-0"
+        <div>
+            <motion.section
+                id="about"
+                variants={sectionSlide}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.3 }}
+                className="relative bg-white w-full min-h-[70vh] md:min-h-[80vh] lg:h-[80vh] overflow-hidden"
             >
-                <Image
-                    src={HistorySectionbg.src}
-                    alt="Our History"
-                    fill
-                    priority
-                    className="object-cover"
-                />
-            </motion.div>
+                {/* Background Image */}
+                <motion.div
+                    style={{ scale: 1.1 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 1.5 }}
+                    className="absolute inset-0"
+                >
+                    <Image
+                        src={HistorySectionbg.src}
+                        alt="Our History"
+                        fill
+                        priority
+                        className="object-cover"
+                    />
+                </motion.div>
 
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black/40 md:bg-black/30" />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/40 md:bg-black/30" />
 
-            {/* Content Wrapper */}
-            <div className="relative z-10 flex items-center justify-center md:justify-start h-full px-4 sm:px-10 md:px-20 lg:px-32 py-10">
+                {/* Content Wrapper */}
+                <div className="relative z-10 flex items-center justify-center md:justify-start h-full px-4 sm:px-10 md:px-20 lg:px-32 py-10">
 
-                {/* Glass Card */}
-                <div
-                    className="
+                    {/* Glass Card */}
+                    <div
+                        className="
                     w-full 
-                    max-w-md 
-                    min-h-[400px] md:h-[60vh] 
+                    max-w-xs 
+                    min-h-[300px] md:h-[60vh] 
                     text-center md:text-left
-                    bg-white/10 backdrop-blur-lg border border-white/20
+                    bg-[#1A649AB5]/71 backdrop-blur-lg border border-white/20
                     text-white 
-                    flex flex-col items-center md:items-start justify-center
+                    flex flex-col items-center md:justify-center justify-between
                     p-8 md:p-12 
                     rounded-sm shadow-2xl
                     "
-                >
-                    <h2 className="text-4xl md:text-5xl font-bold mb-8">
-                        Our History
-                    </h2>
+                    >
+                        <h2 className="text-2xl md:text-4xl font-bold mb-8">
+                            Our History
+                        </h2>
 
-                    <p className="text-base lg:text-lg text-center leading-relaxed mb-4 md:mb-6">
-                        Since 2015, Snow City Stays brings together dreamers and innovators,
-                        drawing inspiration from the timeless culture of the Himalayas.
-                    </p>
+                        <p className="text-base lg:text-lg text-center leading-relaxed mb-4 md:mb-6">
+                            Since 2015, Snow City Stays brings together dreamers and innovators,
+                            drawing inspiration from the timeless culture of the Himalayas.
+                        </p>
 
-                    <button
-                        className="
+                        <button
+                            className="
                         bg-[#486221] text-white 
                         px-4 md:px-5 py-2 
                         text-sm md:text-lg
@@ -82,11 +83,14 @@ export default function HistorySection() {
                         hover:bg-white hover:text-black 
                         transition duration-300
                         "
-                    >
-                        Read History
-                    </button>
+                        >
+                            Read History
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </motion.section>
+
+            </motion.section>
+            <div className="h-[90px] w-full bg-white"></div>
+        </div >
     );
 }

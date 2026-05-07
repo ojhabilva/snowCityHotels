@@ -1,4 +1,5 @@
 "use client";
+import React from 'react';
 
 import { Property2Hover, Property3Hover, PropertyRoom } from "@/constent/graphic";
 import Image from "next/image";
@@ -35,7 +36,7 @@ export default function DirectReservation() {
 
 
                 {/* Header */}
-                <div className="bg-[#e8e1c8] w-full py-4 text-center mb-6">
+                <div className="bg-[#FFFADD] w-full py-4 text-center mb-6">
                     <h2 className="text-2xl md:text-3xl font-semibold">
                         Direct Reservation
                     </h2>
@@ -44,8 +45,8 @@ export default function DirectReservation() {
                 {/* Select */}
                 <div className="flex flex-col items-center mb-8">
                     <label className="text-lg mb-2 font-medium">Select Hotels</label>
-                    <PropertyDropdown 
-                        className="w-full md:w-[500px]" 
+                    <PropertyDropdown
+                        className="w-full md:w-[500px]"
                         onSelect={(val) => {
                             if (val.includes("Nature House")) setSelectedLink("/DirectReservation/nature-house");
                             else if (val.includes("Montana Blue")) setSelectedLink("/DirectReservation/montana-blues");
@@ -60,7 +61,7 @@ export default function DirectReservation() {
                 <div className="grid md:grid-cols-2 gap-14 px-6 md:px-14">
 
                     {/* Stay */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -88,7 +89,7 @@ export default function DirectReservation() {
                     </motion.div>
 
                     {/* Dining */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -120,7 +121,7 @@ export default function DirectReservation() {
 
                 {/* Button */}
                 <div className="flex justify-center mt-12 px-6">
-                    <Link 
+                    <Link
                         href={selectedLink || "#"}
                         className={`w-full md:w-auto bg-black text-white px-12 py-4 text-xl font-bold tracking-widest hover:bg-gray-800 transition shadow-xl text-center ${!selectedLink ? 'opacity-50 cursor-not-allowed' : ''}`}
                     >

@@ -8,10 +8,12 @@ import HeroSection from "@/components/components/HeroSection";
 import OffersBanner from "@/components/components/OffersBanner";
 import PromoSplit from "@/components/components/PromoSplit";
 import SectionHeader from "@/components/components/SectionHeader";
-import { Baan1, Baan2, Baan3, Blog1, MontanaOffer, NatureHouse1, NatureHouse2, NatureHouse3, NatureHouse4, Property1, Property2, Property2Hover, Property3 } from "@/constent/graphic";
+import { Baan1, Baan2, Baan3, Blog1, MontanaOffer, NatureHouse1, NatureHouse2, NatureHouse3, NatureHouse4, Promo, Promo1, Property1, Property2, Property2Hover, Property3 } from "@/constent/graphic";
 import FollowUsSection from "@/pages/HomePages/FollowUsSection";
 import Image from "next/image";
 import { useMenu } from "@/context/MenuContext";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 
 export default function Baan() {
@@ -24,7 +26,7 @@ export default function Baan() {
             desc: "Surrounded by the fragrant apple orchards of Himachal, Snow City Stays, Manali offers a calm retreat for travelers seeking comfort and relaxation. Nestled in the charming town of Haripur, it presents a peaceful escape embraced by natural beauty...",
         },
         {
-            title: "Montana Blue Resort (Manali)",
+            title: "Montana Blues (Manali)",
             image: Property2.src,
             desc: "Perched amidst the scenic heights of Manali, Snow City Stays offers captivating views of the surrounding valleys and mountains. Surrounded by lush landscapes and fresh mountain air, this peaceful retreat creates a relaxing and immersive experience...",
         },
@@ -62,15 +64,47 @@ export default function Baan() {
         },
     ];
 
-    const values = [
-        "Guest-Focused Perspective",
-        "Purposeful Service",
-        "Ethical Practices",
-        "Clear & Honest Communication",
-        "Equitable & Inclusive Employment",
-        "Ongoing Enhancement",
-        "Thoughtful Attention",
-        "Focused Sustainability",
+    const eightfoldValues = [
+        {
+            label: "Right View",
+            title: "Guest-Focused Vision",
+            desc: "Recognizing the diverse needs, cultures, and expectations of our guests is at the heart of what we do. We create experiences that offer comfort, happiness, and a genuine sense of belonging."
+        },
+        {
+            label: "Right Intention",
+            title: "Purposeful Service",
+            desc: "True hospitality is built on thoughtful and meaningful service. We serve with genuine care, ensuring every guest leaves with positive and memorable experiences."
+        },
+        {
+            label: "Right Speech",
+            title: "Transparent Communication",
+            desc: "Trust grows through openness. We communicate with clarity and respect, ensuring our commitments truly reflect the experience we deliver—from promotions to every guest interaction."
+        },
+        {
+            label: "Right Action",
+            title: "Ethical Practices",
+            desc: "Our approach is guided by sustainability and responsible operations. We adopt eco-friendly practices, respect local culture, and promote socially conscious hospitality."
+        },
+        {
+            label: "Right Livelihood",
+            title: "Equitable & Inclusive Employment",
+            desc: "We foster a respectful and inclusive workplace, promoting fairness, equal opportunities, and continuous growth for our team."
+        },
+        {
+            label: "Right Mindfulness",
+            title: "Thoughtful Attention",
+            desc: "By staying present and attentive, we tailor each experience to our guests, address needs proactively, and ensure a smooth and comfortable stay."
+        },
+        {
+            label: "Right Mindfulness",
+            title: "Attentive Care",
+            desc: "By staying fully present in service, we create personalized guest experiences, anticipate and resolve concerns early, and ensure a smooth, seamless stay."
+        },
+        {
+            label: "Right Concentration",
+            title: "Sustainable Growth",
+            desc: "We maintain a balance between profitability and sustainability by embedding long-term environmental, social, and economic considerations into our operations."
+        }
     ];
 
     const features = [
@@ -91,70 +125,125 @@ export default function Baan() {
         },
     ];
 
+    const promoImages = [
+        {
+            image: Property2Hover.src,
+            title: "Midweek Delight",
+            subtitle: "Unlock extra savings available only on our website",
+            description: "Enjoy additional savings when bookings are made from Monday to Sunday",
+            code: "Weekendoff"
+        },
+        {
+            image: Promo1.src,
+            title: "",
+            subtitle: "",
+            description: "",
+            code: ""
+        },
+        {
+            image: Promo.src,
+            title: "",
+            subtitle: "",
+            description: "",
+            code: ""
+        }
+    ];
+
+    const [currentPromo, setCurrentPromo] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentPromo((prev) => (prev + 1) % promoImages.length);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, [promoImages.length]);
+
     return (
         <>
             <section className="w-full bg-white">
 
-                {/* HERO IMAGE */}
+                {/* HERO CAROUSEL */}
                 <section className="w-full pb-10">
-
-                    {/* <button
-                        onClick={openMenu}
-                        className="absolute left-2 top-1/2 -translate-y-1/2 rotate-[-90deg] text-md tracking-widest text-gray-700 hover:text-black transition-colors"
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="relative w-full mb-10 h-[400px] md:h-[500px] overflow-hidden"
                     >
-                        Menu
-                    </button>
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={currentPromo}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 1 }}
+                                className="absolute inset-0"
+                            >
+                                {/* Background Image */}
+                                <Image
+                                    src={promoImages[currentPromo].image}
+                                    alt={promoImages[currentPromo].title}
+                                    fill
+                                    className="object-cover"
+                                />
 
-                    <button
-                        onClick={openContact}
-                        className="absolute right-2 top-1/2 -translate-y-1/2 rotate-90 text-md tracking-widest text-gray-700 hover:text-black transition-colors"
-                    >
-                        Contact
-                    </button> */}
+                                {/* Left Gradient Overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
 
-                    <div className="relative w-full mb-10 h-[300px] md:h-[400px] overflow-hidden">
+                                {/* Content */}
+                                <div className="absolute inset-0 flex flex-col md:flex-row justify-between p-8 md:p-16">
 
-                        {/* Background Image */}
-                        <Image
-                            src={Property2Hover.src}
-                            alt="Midweek Delight"
-                            fill
-                            className="object-cover"
-                        />
+                                    {/* LEFT TEXT */}
+                                    <motion.div
+                                        initial={{ x: -50, opacity: 0 }}
+                                        animate={{ x: 0, opacity: 1 }}
+                                        transition={{ delay: 0.3, duration: 0.8 }}
+                                        className="text-white max-w-xl flex flex-col justify-center"
+                                    >
+                                        <h2 className="text-4xl md:text-7xl praise-regular leading-tight mb-4">
+                                            {promoImages[currentPromo].title.split(' ').map((word, i) => (
+                                                <span key={i}>{word} {i === 0 && <br />}</span>
+                                            ))}
+                                        </h2>
 
-                        {/* Left Gradient Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-[#5a6f2c]/80 to-transparent"></div>
+                                        <p className="text-lg md:text-2xl font-light tracking-wide max-w-[450px]">
+                                            {promoImages[currentPromo].subtitle}
+                                        </p>
+                                    </motion.div>
 
-                        {/* Content */}
-                        <div className="absolute inset-0 flex flex-col md:flex-row justify-between p-6 md:p-10">
+                                    {/* RIGHT TEXT */}
+                                    <motion.div
+                                        initial={{ x: 50, opacity: 0 }}
+                                        animate={{ x: 0, opacity: 1 }}
+                                        transition={{ delay: 0.5, duration: 0.8 }}
+                                        className="text-white flex flex-col justify-center items-start md:items-end max-w-md mt-8 md:mt-0"
+                                    >
+                                        <p className="text-base md:text-xl text-left md:text-right font-light leading-relaxed mb-6">
+                                            {promoImages[currentPromo].description}
+                                        </p>
 
-                            {/* LEFT TEXT */}
-                            <div className="text-white max-w-md flex flex-col justify-between">
-                                <h2 className="text-3xl md:text-6xl praise-regular leading-tight">
-                                    Midweek <br /> Delight
-                                </h2>
+                                        <button className="bg-[#5a6f2c] px-8 py-3 text-lg font-bold tracking-widest hover:bg-white hover:text-black transition-all duration-300 shadow-xl rounded-sm">
+                                            {promoImages[currentPromo].code === "" ? "" : `Use Code : ${promoImages[currentPromo].code}`}
+                                        </button>
+                                    </motion.div>
 
-                                <p className="mt-6 text-sm md:text-2xl max-w-[350px]">
-                                    Unlock extra savings available only on our website
-                                </p>
-                            </div>
+                                </div>
+                            </motion.div>
+                        </AnimatePresence>
 
-                            {/* RIGHT TEXT */}
-                            <div className="text-white flex flex-col justify-end items-start md:items-end max-w-md mt-6 md:mt-0">
-
-                                <p className="text-sm md:text-lg text-left">
-                                    Enjoy additional savings when bookings are made from Monday to Sunday
-                                </p>
-
-                                <button className="mt-4 bg-[#5a6f2c] px-4 py-2 text-lg hover:bg-white hover:text-black transition">
-                                    Use Code : Weekendoff
-                                </button>
-                            </div>
-
+                        {/* Carousel Indicators */}
+                        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+                            {promoImages.map((_, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => setCurrentPromo(index)}
+                                    className={`w-3 h-3 rounded-full transition-all duration-300 ${currentPromo === index ? "bg-white w-8" : "bg-white/40"
+                                        }`}
+                                />
+                            ))}
                         </div>
-
-                    </div>
-
+                    </motion.div>
                 </section>
 
                 {/* BOOKING BAR */}
@@ -202,22 +291,35 @@ export default function Baan() {
                 </div>
 
                 {/* ===== VALUES GRID ===== */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-16">
 
-                    {values.map((item, index) => (
-                        <div
-                            key={index}
-                            className="bg-[#4b6527] text-white px-8 py-12 rounded-xl text-sm md:text-2xl shadow-md hover:shadow-xl transition"
-                        >
-                            <p className="opacity-70 text-xs mb-1">Right {index + 1} →</p>
-                            <h3 className="">{item}</h3>
+                    {eightfoldValues.map((item, index) => (
+                        <div key={index} className="group [perspective:1000px] h-[300px] md:h-[300px]">
+                            <motion.div
+                                className="relative w-full h-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
+                            >
+                                {/* FRONT (Green) */}
+                                <div className="absolute inset-0 bg-[#4b6527] text-white p-8 rounded-xl shadow-md flex flex-col justify-center [backface-visibility:hidden]">
+                                    <p className="opacity-70 text-sm mb-2">{item.label} →</p>
+                                    <h3 className="text-2xl font-bold leading-tight">{item.title}</h3>
+                                </div>
+
+                                {/* BACK (Cream) */}
+                                <div className="absolute inset-0 bg-[#fffbe6] text-gray-800 p-6 rounded-xl shadow-xl flex flex-col justify-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                                    <p className="text-gray-500 text-xs mb-1 font-medium">{item.label} →</p>
+                                    <h3 className="text-lg font-bold mb-3 text-black leading-tight">{item.title}</h3>
+                                    <p className="text-sm leading-relaxed">
+                                        {item.desc}
+                                    </p>
+                                </div>
+                            </motion.div>
                         </div>
                     ))}
 
                 </div>
 
                 {/* ===== SUSTAINABILITY SECTION ===== */}
-                <div className="grid md:grid-cols-2 gap-10 items-center mb-16">
+                <div className="grid py-10 md:grid-cols-2 gap-10 items-center mb-16">
 
                     {/* IMAGE */}
                     <div>

@@ -158,7 +158,7 @@ export default function Baan() {
                 </section>
 
                 {/* BOOKING BAR */}
-                <BookingBar />
+                <BookingBar slug="baan" />
 
                 {/* DESCRIPTION */}
                 <div className="max-w-6xl mx-auto text-center px-6 py-10 text-gray-700 text-sm md:text-xl leading-relaxed">

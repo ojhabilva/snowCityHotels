@@ -36,37 +36,46 @@ export default function AboutUs() {
 
     return (
         <>
-            <section className="relative font-poppins w-full h-[80vh] md:h-[90vh] flex items-end pb-5 justify-center text-center text-white">
-
+            <section className="relative font-poppins w-full h-[60vh] md:h-[80vh] overflow-hidden flex items-center justify-center text-white">
                 {/* Background Image */}
-                <Image
-                    src={AboutUsBG}
-                    alt="Snow City"
-                    fill
-                    className="object-cover"
-                    priority
-                />
-
-                {/* Gradient Overlay */}
-                {/* <div className="absolute inset-0 bg-gradient-to-t from-[#486221]/100 via-[#486221]/30 to-black/20" /> */}
-
-                <p className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-sm md:text-5xl mb-2 opacity-90">
-                    About us
-                </p>
-                {/* Content */}
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}
-                    className="relative h-full flex justify-center items-center max-w-[1400px] px-6"
+                <motion.div 
+                    initial={{ scale: 1.1 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 2 }}
+                    className="absolute inset-0"
                 >
+                    <Image
+                        src={AboutUsBG}
+                        alt="Snow City"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                </motion.div>
 
-                    <p className="max-w-5xl text-sm md:text-base font-bold [text-shadow:_0_4px_8px_rgba(0,0,0,0.5)] lg:text-4xl leading-relaxed text-center opacity-90">
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/30" />
+
+                <div className="relative z-10 text-center px-6">
+                    <motion.p 
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5 }}
+                        className="text-sm md:text-xl uppercase tracking-[0.3em] mb-6"
+                    >
+                        About us
+                    </motion.p>
+                    
+                    <motion.h1 
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.8 }}
+                        className="max-w-5xl text-2xl md:text-6xl font-bold leading-tight [text-shadow:_0_4px_12px_rgba(0,0,0,0.5)]"
+                    >
                         The essence of our brand is rooted in bringing different
                         elements together in perfect balance.
-                    </p>
-
-                </motion.div>
+                    </motion.h1>
+                </div>
             </section>
             <section className="w-full bg-[#f5f5f5]">
 

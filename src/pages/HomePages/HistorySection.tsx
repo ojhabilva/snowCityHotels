@@ -29,35 +29,42 @@ export default function HistorySection() {
             className="relative w-full min-h-[70vh] md:min-h-[80vh] lg:h-[80vh] overflow-hidden"
         >
             {/* Background Image */}
-            <Image
-                src={HistorySectionbg.src}
-                alt="Our History"
-                fill
-                priority
-                className="object-cover"
-            />
+            <motion.div 
+                style={{ scale: 1.1 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 1.5 }}
+                className="absolute inset-0"
+            >
+                <Image
+                    src={HistorySectionbg.src}
+                    alt="Our History"
+                    fill
+                    priority
+                    className="object-cover"
+                />
+            </motion.div>
 
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/40 md:bg-black/30" />
 
             {/* Content Wrapper */}
-            <div className="relative z-10 flex items-center justify-center md:justify-start h-full px-4 sm:px-6 md:px-12 lg:px-20 py-10 md:py-0">
+            <div className="relative z-10 flex items-center justify-center md:justify-start h-full px-4 sm:px-10 md:px-20 lg:px-32 py-10">
 
                 {/* Glass Card */}
                 <div
                     className="
                     w-full 
-                    max-w-xs 
-                    h-[45vh] md:h-[60vh] 
+                    max-w-md 
+                    min-h-[400px] md:h-[60vh] 
                     text-center md:text-left
-                    bg-[#1A649AB5]/50 backdrop-blur-md 
+                    bg-white/10 backdrop-blur-lg border border-white/20
                     text-white 
-                    flex flex-col items-center justify-between
-                    p-10 sm:p-6 md:p-8 
-                    rounded-lg shadow-xl
+                    flex flex-col items-center md:items-start justify-center
+                    p-8 md:p-12 
+                    rounded-sm shadow-2xl
                     "
                 >
-                    <h2 className="text-3xl font-semibold mb-4 md:mb-6">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-8">
                         Our History
                     </h2>
 

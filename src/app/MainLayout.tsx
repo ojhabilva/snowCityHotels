@@ -3,7 +3,7 @@
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/navbar";
-import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
+import { Geist, Geist_Mono, Playfair_Display, Satisfy } from "next/font/google";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -21,6 +21,12 @@ const playfair = Playfair_Display({
     variable: "--font-playfair",
 });
 
+const satisfy = Satisfy({
+    subsets: ["latin"],
+    weight: ["400"],
+    variable: "--font-satisfy",
+});
+
 import { MenuProvider } from "@/context/MenuContext";
 import SideMenu from "@/components/layout/SideMenu";
 import ContactMenu from "@/components/layout/ContactMenu";
@@ -28,7 +34,7 @@ import ContactMenu from "@/components/layout/ContactMenu";
 export default function MainLayout({ children }) {
     return (
         <html lang="en">
-            <body>
+            <body className={`${satisfy.variable}`}>
                 <MenuProvider>
                     <Navbar />
                     <SideMenu />

@@ -59,7 +59,7 @@ export default function MontanaBlueResort() {
 
                 {/* HERO IMAGE */}
                 <HeroSection image={MontanaBG.src} />
-                <BookingBar />
+                <BookingBar slug="montana-blues" />
 
                 {/* DESCRIPTION */}
                 <div className="max-w-6xl mx-auto text-center px-6 py-10 text-gray-700 text-sm md:text-xl leading-relaxed">

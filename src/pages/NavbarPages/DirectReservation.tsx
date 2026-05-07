@@ -5,10 +5,14 @@ import Image from "next/image";
 import FollowUsSection from "../HomePages/FollowUsSection";
 import { useMenu } from "@/context/MenuContext";
 import PropertyDropdown from "@/components/components/PropertyDropdown";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { useState } from "react";
 
 
 export default function DirectReservation() {
     const { openMenu, openContact } = useMenu();
+    const [selectedLink, setSelectedLink] = useState("");
 
     return (
         <>
@@ -39,21 +43,34 @@ export default function DirectReservation() {
 
                 {/* Select */}
                 <div className="flex flex-col items-center mb-8">
-                    <label className="text-lg mb-2">Select Hotels</label>
-                    <PropertyDropdown className="w-full md:w-[500px]" />
+                    <label className="text-lg mb-2 font-medium">Select Hotels</label>
+                    <PropertyDropdown 
+                        className="w-full md:w-[500px]" 
+                        onSelect={(val) => {
+                            if (val.includes("Nature House")) setSelectedLink("/DirectReservation/nature-house");
+                            else if (val.includes("Montana Blue")) setSelectedLink("/DirectReservation/montana-blues");
+                            else if (val.includes("Baan")) setSelectedLink("/DirectReservation/baan");
+                            else if (val.includes("Shivalaya")) setSelectedLink("/DirectReservation/shivalaya");
+                        }}
+                    />
                 </div>
 
 
                 {/* Cards */}
-                <div className="grid md:grid-cols-2 gap-14 px-14">
+                <div className="grid md:grid-cols-2 gap-14 px-6 md:px-14">
 
                     {/* Stay */}
-                    <div className="relative h-[450px] overflow-hidden group">
+                    <motion.div 
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="relative h-[350px] md:h-[450px] overflow-hidden group rounded-sm shadow-lg"
+                    >
                         <Image
                             src={Property3Hover.src}
                             alt="Stay"
                             fill
-                            className="object-cover group-hover:scale-105 transition duration-500"
+                            className="object-cover group-hover:scale-105 transition duration-700"
                         />
                         <div className="absolute w-full h-[2px] bg-white top-25 left-0"></div>
 
@@ -63,20 +80,25 @@ export default function DirectReservation() {
                                 Stay
                             </h3>
 
-                            <ul className="absolute top-40 left-10 text-white text-2xl space-y-2">
+                            <ul className="absolute top-32 md:top-40 left-10 text-white text-lg md:text-2xl space-y-2 max-w-[80%]">
                                 <li>• Complimentary accommodation for two children under 6 years of age</li>
                                 <li>• Enjoy 10% off on laundry services for bills above INR 1000</li>
                             </ul>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Dining */}
-                    <div className="relative h-[450px] overflow-hidden group">
+                    <motion.div 
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="relative h-[350px] md:h-[450px] overflow-hidden group rounded-sm shadow-lg"
+                    >
                         <Image
                             src={PropertyRoom.src}
                             alt="Dining"
                             fill
-                            className="object-cover group-hover:scale-105 transition duration-500"
+                            className="object-cover group-hover:scale-105 transition duration-700"
                         />
 
                         <div className="absolute w-full h-[2px] bg-white top-25 left-0"></div>
@@ -87,20 +109,23 @@ export default function DirectReservation() {
                                 Dining
                             </h3>
 
-                            <ul className="absolute top-40 left-10 text-white text-2xl space-y-2">
+                            <ul className="absolute top-32 md:top-40 left-10 text-white text-lg md:text-2xl space-y-2 max-w-[80%]">
                                 <li>• Enjoy 10% off on all dining</li>
                                 <li>• Happy Hours: Buy 2 drinks and get the third complimentary (11:00–19:00)</li>
                             </ul>
                         </div>
-                    </div>
+                    </motion.div>
 
                 </div>
 
                 {/* Button */}
-                <div className="flex justify-center mt-8">
-                    <button className="bg-black text-white px-6 py-3 text-xl tracking-wide hover:bg-gray-800 transition">
+                <div className="flex justify-center mt-12 px-6">
+                    <Link 
+                        href={selectedLink || "#"}
+                        className={`w-full md:w-auto bg-black text-white px-12 py-4 text-xl font-bold tracking-widest hover:bg-gray-800 transition shadow-xl text-center ${!selectedLink ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    >
                         BOOK NOW
-                    </button>
+                    </Link>
                 </div>
 
             </section>

@@ -91,7 +91,7 @@ export default function BlogSection() {
           className="flex flex-col"
         >
           <Link href="/Sustainability">
-            <div className="relative w-full h-[420px] md:h-[600px] overflow-hidden cursor-pointer group">
+            <div className="relative w-full h-[420px] md:h-[600px] overflow-hidden cursor-pointer group rounded-sm shadow-xl">
               <Image
                 src={Blog1.src}
                 alt="Sustainability"
@@ -122,8 +122,8 @@ export default function BlogSection() {
               transition={{ delay: i * 0.15 }}
               className="flex flex-col justify-center items-center"
             >
-              <Link href={item.title === "Culture" ? "/Culture" : "#"}>
-                <div className="relative w-[400px] h-[150px] md:h-[180px] overflow-hidden cursor-pointer group">
+              <Link href={item.title === "Culture" ? "/Culture" : "#"} className="w-full">
+                <div className="relative w-full h-[200px] md:h-[180px] overflow-hidden cursor-pointer group rounded-sm shadow-md">
                   <Image
                     src={item.image}
                     alt={item.title}

@@ -62,7 +62,7 @@ export default function NatureHouse() {
                 <HeroSection image="/heroSection/Welcome to1.mp4" />
 
                 {/* BOOKING BAR */}
-                <BookingBar />
+                <BookingBar slug="nature-house" />
 
                 {/* DESCRIPTION */}
                 <div className="max-w-6xl mx-auto text-center px-6 py-10 text-gray-700 text-sm md:text-xl leading-relaxed">
